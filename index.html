@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IRONCORE FITNESS | Premium Gym & High-Performance Training</title>
+  <meta name="description" content="Transform your fitness journey at IRONCORE FITNESS with elite coaches, world-class equipment, and personalized training programs.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FF5A1F'><path d='M20.57 14.86L22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z'/></svg>">
+
+  <!-- Font Awesome 6 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       A. NAVIGATION BAR
+       ========================================================================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand">
+        <div class="nav-brand-icon">
+          <i class="fa-solid fa-dumbbell"></i>
+        </div>
+        <span>IRON<span class="brand-accent">CORE</span></span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="programs.html" class="nav-link">Programs</a></li>
+        <li><a href="trainers.html" class="nav-link">Trainers</a></li>
+        <li><a href="membership.html" class="nav-link">Membership</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#joinModal" class="btn btn-primary btn-sm" data-open-modal="joinModal" data-plan="Premium">
+          <i class="fa-solid fa-bolt"></i> Join Now
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Overlay -->
+  <div class="mobile-nav-overlay" id="mobileOverlay">
+    <div class="mobile-nav-drawer">
+      <div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+          <div class="nav-brand" style="font-size: 1.4rem;">
+            <div class="nav-brand-icon" style="width: 36px; height: 36px; font-size: 1rem;">
+              <i class="fa-solid fa-dumbbell"></i>
+            </div>
+            <span>IRON<span class="brand-accent">CORE</span></span>
+          </div>
+          <button class="mobile-nav-close" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <div class="mobile-nav-links">
+          <a href="index.html" class="mobile-nav-link active">Home</a>
+          <a href="about.html" class="mobile-nav-link">About Us</a>
+          <a href="programs.html" class="mobile-nav-link">Programs</a>
+          <a href="trainers.html" class="mobile-nav-link">Trainers</a>
+          <a href="membership.html" class="mobile-nav-link">Membership</a>
+          <a href="gallery.html" class="mobile-nav-link">Gallery</a>
+          <a href="contact.html" class="mobile-nav-link">Contact</a>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem;">
+        <button class="btn btn-primary btn-block" data-open-modal="joinModal" data-plan="Premium">
+          <i class="fa-solid fa-bolt"></i> Join IRONCORE
+        </button>
+        <button class="btn btn-secondary btn-block whatsapp-trigger">
+          <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       B. HERO SECTION
+       ========================================================================== -->
+  <header class="hero">
+    <div class="hero-background">
+      <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1920&q=80" alt="Ironcore Gym Atmosphere" class="hero-bg-img">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-glow"></div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span>Metro City's Premier Fitness Destination</span>
+        </div>
+
+        <h1 class="hero-title">
+          BUILD YOUR BODY. <br>
+          <span class="title-accent">MASTER YOUR MIND.</span>
+        </h1>
+
+        <p class="hero-description">
+          Transform your fitness journey with expert trainers, modern equipment and personalized workout programs. Unleash your full physical potential.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="programs.html" class="btn btn-primary btn-lg">
+            <i class="fa-solid fa-fire"></i> Explore Programs
+          </a>
+          <button class="btn btn-secondary btn-lg" data-open-modal="joinModal" data-plan="Premium">
+            <i class="fa-solid fa-user-plus"></i> Join Our Gym
+          </button>
+        </div>
+
+        <div class="hero-trust-bar">
+          <div class="trust-item">
+            <i class="fa-solid fa-trophy trust-item-icon"></i>
+            <div class="trust-item-text">
+              <strong>#1 Rated Gym</strong>
+              <span>Awarded Best Training Facility 2025</span>
+            </div>
+          </div>
+          <div class="trust-item">
+            <i class="fa-solid fa-certificate trust-item-icon"></i>
+            <div class="trust-item-text">
+              <strong>Certified Coaches</strong>
+              <span>CSCS & ACSM Elite Trainers</span>
+            </div>
+          </div>
+          <div class="trust-item">
+            <i class="fa-solid fa-clock trust-item-icon"></i>
+            <div class="trust-item-text">
+              <strong>24/7 Access</strong>
+              <span>Train on Your Own Schedule</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       C. STATISTICS SECTION
+       ========================================================================== -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <div class="stat-info">
+            <span class="stat-value stat-counter" data-target="2500" data-suffix="+">2,500+</span>
+            <span class="stat-label">Active Members</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fa-solid fa-dumbbell"></i>
+          </div>
+          <div class="stat-info">
+            <span class="stat-value stat-counter" data-target="25" data-suffix="+">25+</span>
+            <span class="stat-label">Expert Trainers</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fa-solid fa-calendar-check"></i>
+          </div>
+          <div class="stat-info">
+            <span class="stat-value stat-counter" data-target="12" data-suffix="+">12+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fa-solid fa-layer-group"></i>
+          </div>
+          <div class="stat-info">
+            <span class="stat-value stat-counter" data-target="15" data-suffix="+">15+</span>
+            <span class="stat-label">Training Programs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       D. ABOUT SECTION PREVIEW
+       ========================================================================== -->
+  <section class="section section-bg-dark" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=1000&q=80" alt="Ironcore Gym Interior" class="about-main-image">
+          <div class="about-floating-card">
+            <div class="about-floating-icon">
+              <i class="fa-solid fa-award"></i>
+            </div>
+            <div class="about-floating-text">
+              <h5>15,000 SQ FT</h5>
+              <p>Biomechanical Training Arena</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <div class="section-tag">
+            <i class="fa-solid fa-shield-halved"></i> About Ironcore
+          </div>
+          <h2 class="section-title">ENGINEERED FOR <span class="text-orange">MAXIMUM RESULTS</span></h2>
+          <p class="about-text">
+            At IRONCORE FITNESS, we believe peak physical conditioning is forged through discipline, scientific programming, and uncompromising motivation. We provide a powerhouse environment where beginners and world-class athletes break plateaus every single day.
+          </p>
+
+          <div class="mission-vision-grid">
+            <div class="mv-card">
+              <div class="mv-card-header">
+                <i class="fa-solid fa-bullseye"></i>
+                <h4>Our Mission</h4>
+              </div>
+              <p>To empower every individual with scientifically backed coaching, elite training tools, and an unstoppable mindset.</p>
+            </div>
+            <div class="mv-card">
+              <div class="mv-card-header">
+                <i class="fa-solid fa-eye"></i>
+                <h4>Our Vision</h4>
+              </div>
+              <p>To redefine fitness culture into a high-energy lifestyle of longevity, explosive functional power, and total wellness.</p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 1.2rem; align-items: center; flex-wrap: wrap;">
+            <a href="about.html" class="btn btn-primary">
+              Learn More About Us <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="gallery.html" class="btn btn-secondary">
+              <i class="fa-solid fa-camera"></i> Tour Facilities
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       E. FITNESS PROGRAMS SECTION
+       ========================================================================== -->
+  <section class="section" id="programs">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <i class="fa-solid fa-fire-flame-curved"></i> Elite Workouts
+        </div>
+        <h2 class="section-title">SIGNATURE FITNESS <span class="text-orange">PROGRAMS</span></h2>
+        <p class="section-description">
+          Engineered for every goal: whether you are lifting heavy for muscle hypertrophy, dialing in cardio endurance, or seeking athletic agility.
+        </p>
+      </div>
+
+      <div class="programs-grid">
+        <!-- 1. Weight Training -->
+        <div class="program-card">
+          <div class="program-image-box">
+            <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80" alt="Weight Training" class="program-img">
+            <div class="program-overlay"></div>
+            <span class="program-badge">Hypertrophy</span>
+          </div>
+          <div class="program-content">
+            <h3 class="program-title">Weight Training</h3>
+            <p class="program-desc">
+              Master compound movements and progressive overload with Olympic barbells, dumbbell racks, and pinpoint selectorized machines.
+            </p>
+            <div class="program-footer">
+              <a href="programs.html#weight-training" class="program-link">
+                Explore Program <i class="fa-solid fa-chevron-right"></i>
+              </a>
+              <button class="btn btn-outline-orange btn-sm" data-open-modal="joinModal" data-program="Weight Training">
+                Join
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Cardio Training -->
+        <div class="program-card">
+          <div class="program-image-box">
+            <img src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&w=800&q=80" alt="Cardio Training" class="program-img">
+            <div class="program-overlay"></div>
+            <span class="program-badge">Fat Burn</span>
+          </div>
+          <div class="program-content">
+            <h3 class="program-title">Cardio Training</h3>
+            <p class="program-desc">
+              High-intensity interval cardio, Curved Woodway treadmills, assault bikes, and rowing ergometers to elevate VO2 max and burn calories.
+            </p>
+            <div class="program-footer">
+              <a href="programs.html#cardio-training" class="program-link">
+                Explore Program <i class="fa-solid fa-chevron-right"></i>
+              </a>
+              <button class="btn btn-outline-orange btn-sm" data-open-modal="joinModal" data-program="Cardio Training">
+                Join
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Personal Training -->
+        <div class="program-card">
+          <div class="program-image-box">
+            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=800&q=80" alt="Personal Training" class="program-img">
+            <div class="program-overlay"></div>
+            <span class="program-badge">1-on-1 Coaching</span>
+          </div>
+          <div class="program-content">
+            <h3 class="program-title">Personal Training</h3>
+            <p class="program-desc">
+              Bespoke biomechanics analysis, individualized nutrition blueprints, and daily accountability directly with certified master coaches.
+            </p>
+            <div class="program-footer">
+              <a href="programs.html#personal-training" class="program-link">
+                Explore Program <i class="fa-solid fa-chevron-right"></i>
+              </a>
+              <button class="btn btn-outline-orange btn-sm" data-open-modal="joinModal" data-program="Personal Training">
+                Join
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. CrossFit -->
+        <div class="program-card">
+          <div class="program-image-box">
+            <img src="https://images.unsplash.com/photo-1517963879433-6ad2b056d712?auto=format&fit=crop&w=800&q=80" alt="CrossFit" class="program-img">
+            <div class="program-overlay"></div>
+            <span class="program-badge">Functional</span>
+          </div>
+          <div class="program-content">
+            <h3 class="program-title">CrossFit & WOD</h3>
+            <p class="program-desc">
+              High-octane Workouts of the Day combining gymnastics, plyometrics, rope climbs, Olympic snatch, and kettlebell conditioning.
+            </p>
+            <div class="program-footer">
+              <a href="programs.html#crossfit" class="program-link">
+                Explore Program <i class="fa-solid fa-chevron-right"></i>
+              </a>
+              <button class="btn btn-outline-orange btn-sm" data-open-modal="joinModal" data-program="CrossFit">
+                Join
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Yoga & Flexibility -->
+        <div class="program-card">
+          <div class="program-image-box">
+            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80" alt="Yoga & Flexibility" class="program-img">
+            <div class="program-overlay"></div>
+            <span class="program-badge">Mind & Body</span>
+          </div>
+          <div class="program-content">
+            <h3 class="program-title">Yoga & Flexibility</h3>
+            <p class="program-desc">
+              Restore joint mobility, strengthen deep core stabilizers, release myofascial tension, and harmonize mental focus and breathwork.
+            </p>
+            <div class="program-footer">
+              <a href="programs.html#yoga-flexibility" class="program-link">
+                Explore Program <i class="fa-solid fa-chevron-right"></i>
+              </a>
+              <button class="btn btn-outline-orange btn-sm" data-open-modal="joinModal" data-program="Yoga & Flexibility">
+                Join
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Strength Training -->
+        <div class="program-card">
+          <div class="program-image-box">
+            <img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?auto=format&fit=crop&w=800&q=80" alt="Strength Training" class="program-img">
+            <div class="program-overlay"></div>
+            <span class="program-badge">Raw Power</span>
+          </div>
+          <div class="program-content">
+            <h3 class="program-title">Strength Training</h3>
+            <p class="program-desc">
+              Powerlifting platforms, calibrated competition plates, deadlift jacks, and specialized bars tailored for sheer neurological strength output.
+            </p>
+            <div class="program-footer">
+              <a href="programs.html#strength-training" class="program-link">
+                Explore Program <i class="fa-solid fa-chevron-right"></i>
+              </a>
+              <button class="btn btn-outline-orange btn-sm" data-open-modal="joinModal" data-program="Strength Training">
+                Join
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 3.5rem;">
+        <a href="programs.html" class="btn btn-secondary btn-lg">
+          View All Workout Schedules & Details <i class="fa-solid fa-calendar-days"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       F. WHY CHOOSE US?
+       ========================================================================== -->
+  <section class="section section-bg-dark" id="why-us">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <i class="fa-solid fa-gem"></i> The Ironcore Standard
+        </div>
+        <h2 class="section-title">WHY CHOOSE <span class="text-orange">IRONCORE FITNESS?</span></h2>
+        <p class="section-description">
+          We don't settle for average gym standards. Here is why over 2,500 dedicated members call IRONCORE their training sanctuary.
+        </p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon-box">
+            <i class="fa-solid fa-id-badge"></i>
+          </div>
+          <h3 class="why-title">Certified Trainers</h3>
+          <p class="why-desc">
+            All our 25+ resident coaches hold globally accredited credentials (CSCS, NASM, ACSM) with proven athletic and rehab backgrounds.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon-box">
+            <i class="fa-solid fa-dumbbell"></i>
+          </div>
+          <h3 class="why-title">Modern Equipment</h3>
+          <p class="why-desc">
+            Equipped with top-tier Hammer Strength, Eleiko Olympic bars, Rogue rigs, and biomechanically calibrated Arsenal Strength machines.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon-box">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <h3 class="why-title">Personalized Training</h3>
+          <p class="why-desc">
+            No cookie-cutter workouts. We assess your posture, joint range, metabolic history, and craft progressive workout and meal blueprints.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon-box">
+            <i class="fa-solid fa-arrows-rotate"></i>
+          </div>
+          <h3 class="why-title">Flexible Membership</h3>
+          <p class="why-desc">
+            No hidden lock-ins. Easily pause or upgrade memberships according to your travel, work, or recovery commitments.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon-box">
+            <i class="fa-solid fa-people-group"></i>
+          </div>
+          <h3 class="why-title">Supportive Community</h3>
+          <p class="why-desc">
+            Surround yourself with like-minded, ambitious people who cheer your PRs, celebrate milestones, and push you forward every day.
+          </p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon-box">
+            <i class="fa-solid fa-sparkles"></i>
+          </div>
+          <h3 class="why-title">Clean & Safe Environment</h3>
+          <p class="why-desc">
+            Hospital-grade HEPA air filtration, continuous hourly equipment sanitization, pristine locker rooms, and certified first-responders.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       BONUS INTERACTIVE: BMI & WORKOUT CALCULATOR
+       ========================================================================== -->
+  <section class="section">
+    <div class="container">
+      <div class="bmi-widget">
+        <div class="bmi-grid">
+          <div>
+            <div class="section-tag">
+              <i class="fa-solid fa-calculator"></i> Free Body Assessment
+            </div>
+            <h2 style="font-size: clamp(1.8rem, 3.5vw, 2.5rem); margin-bottom: 1rem;">
+              CALCULATE YOUR <span class="text-orange">FITNESS METRICS</span>
+            </h2>
+            <p style="margin-bottom: 2rem;">
+              Input your height and weight to receive your Body Mass Index (BMI) alongside a customized IRONCORE training recommendation.
+            </p>
+
+            <form id="bmiForm">
+              <div class="bmi-form-row">
+                <div class="bmi-form-group">
+                  <label class="form-label" for="bmiHeight">Height (cm)</label>
+                  <input type="number" id="bmiHeight" class="form-control" placeholder="e.g. 175" min="100" max="250" required>
+                </div>
+                <div class="bmi-form-group">
+                  <label class="form-label" for="bmiWeight">Weight (kg)</label>
+                  <input type="number" id="bmiWeight" class="form-control" placeholder="e.g. 74" min="30" max="250" required>
+                </div>
+              </div>
+
+              <div class="bmi-form-row">
+                <div class="bmi-form-group">
+                  <label class="form-label" for="bmiAge">Age</label>
+                  <input type="number" id="bmiAge" class="form-control" placeholder="e.g. 26" min="14" max="90">
+                </div>
+                <div class="bmi-form-group">
+                  <label class="form-label" for="bmiGender">Gender</label>
+                  <select id="bmiGender" class="form-control">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">
+                <i class="fa-solid fa-gauge-high"></i> Compute My Fitness Score
+              </button>
+            </form>
+          </div>
+
+          <div class="bmi-result-card">
+            <div style="font-size: 0.85rem; font-weight: 700; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">
+              Your Estimated BMI
+            </div>
+            <div class="bmi-meter-value" id="bmiValueDisplay">--</div>
+            <div class="bmi-meter-category" id="bmiCategoryDisplay">Enter Details Above</div>
+            <p class="bmi-advice" id="bmiAdviceDisplay">
+              Your customized physical breakdown and workout blueprint will display right here after calculating.
+            </p>
+            <button id="bmiRecommendBtn" class="btn btn-primary" style="display: none;">
+              Claim Free Trial <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       G. FEATURED TRAINERS SECTION
+       ========================================================================== -->
+  <section class="section section-bg-dark" id="trainers">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <i class="fa-solid fa-user-ninja"></i> Master Coaches
+        </div>
+        <h2 class="section-title">MEET OUR <span class="text-orange">EXPERT TRAINERS</span></h2>
+        <p class="section-description">
+          Mentors who live and breathe performance. Passionate, battle-tested professionals dedicated to guiding your form, nutrition, and mentality.
+        </p>
+      </div>
+
+      <div class="trainers-grid">
+        <!-- Trainer 1 -->
+        <div class="trainer-card">
+          <div class="trainer-image-box">
+            <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&w=600&q=80" alt="Marcus Vance" class="trainer-img">
+            <div class="trainer-overlay"></div>
+            <div class="trainer-socials">
+              <a href="https://instagram.com" target="_blank" class="trainer-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://twitter.com" target="_blank" class="trainer-social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="https://youtube.com" target="_blank" class="trainer-social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="trainer-info">
+            <h3 class="trainer-name">Marcus Vance</h3>
+            <div class="trainer-specialization">Head Strength Coach</div>
+            <div class="trainer-experience"><i class="fa-solid fa-clock-rotate-left"></i> 11+ Years Experience</div>
+          </div>
+        </div>
+
+        <!-- Trainer 2 -->
+        <div class="trainer-card">
+          <div class="trainer-image-box">
+            <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=600&q=80" alt="Elena Rostova" class="trainer-img">
+            <div class="trainer-overlay"></div>
+            <div class="trainer-socials">
+              <a href="https://instagram.com" target="_blank" class="trainer-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://twitter.com" target="_blank" class="trainer-social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="https://youtube.com" target="_blank" class="trainer-social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="trainer-info">
+            <h3 class="trainer-name">Elena Rostova</h3>
+            <div class="trainer-specialization">Olympic Weightlifting</div>
+            <div class="trainer-experience"><i class="fa-solid fa-clock-rotate-left"></i> 8+ Years Experience</div>
+          </div>
+        </div>
+
+        <!-- Trainer 3 -->
+        <div class="trainer-card">
+          <div class="trainer-image-box">
+            <img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?auto=format&fit=crop&w=600&q=80" alt="David Thorne" class="trainer-img">
+            <div class="trainer-overlay"></div>
+            <div class="trainer-socials">
+              <a href="https://instagram.com" target="_blank" class="trainer-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://twitter.com" target="_blank" class="trainer-social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="https://youtube.com" target="_blank" class="trainer-social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="trainer-info">
+            <h3 class="trainer-name">David Thorne</h3>
+            <div class="trainer-specialization">CrossFit & Conditioning</div>
+            <div class="trainer-experience"><i class="fa-solid fa-clock-rotate-left"></i> 9+ Years Experience</div>
+          </div>
+        </div>
+
+        <!-- Trainer 4 -->
+        <div class="trainer-card">
+          <div class="trainer-image-box">
+            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80" alt="Maya Lin" class="trainer-img">
+            <div class="trainer-overlay"></div>
+            <div class="trainer-socials">
+              <a href="https://instagram.com" target="_blank" class="trainer-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://twitter.com" target="_blank" class="trainer-social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="https://youtube.com" target="_blank" class="trainer-social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="trainer-info">
+            <h3 class="trainer-name">Maya Lin</h3>
+            <div class="trainer-specialization">Mobility & Yoga Master</div>
+            <div class="trainer-experience"><i class="fa-solid fa-clock-rotate-left"></i> 7+ Years Experience</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 3.5rem;">
+        <a href="trainers.html" class="btn btn-outline-orange">
+          View All 25+ Trainer Profiles & Certifications <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       H. MEMBERSHIP PREVIEW SECTION
+       ========================================================================== -->
+  <section class="section" id="membership">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <i class="fa-solid fa-crown"></i> Transparent Pricing
+        </div>
+        <h2 class="section-title">MEMBERSHIP <span class="text-orange">PLANS</span></h2>
+        <p class="section-description">
+          Zero hidden fees. Full access to state-of-the-art facilities. Choose the ideal membership level designed for your fitness aspirations.
+        </p>
+
+        <!-- Monthly / Annual Toggle -->
+        <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 2rem;">
+          <span style="font-weight: 600; color: #FFFFFF;">Monthly</span>
+          <label style="position: relative; display: inline-block; width: 56px; height: 30px; cursor: pointer;">
+            <input type="checkbox" id="billingToggle" style="opacity: 0; width: 0; height: 0;">
+            <span style="position: absolute; inset: 0; background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: 34px; transition: 0.3s;" id="toggleSlider"></span>
+          </label>
+          <span style="font-weight: 600; color: var(--color-text-muted);">
+            Annual <span style="background: var(--color-accent); color: #fff; font-size: 0.72rem; padding: 2px 8px; border-radius: 12px; font-weight: 800; margin-left: 4px;">SAVE 20%</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Basic Plan -->
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h3 class="pricing-plan-name">Basic</h3>
+            <p class="pricing-desc">Perfect for beginners building a consistent workout habit.</p>
+            <div class="pricing-price-box">
+              <span class="pricing-currency">₹</span>
+              <span class="pricing-amount" data-monthly="999" data-annual="799">999</span>
+              <span class="pricing-duration">/ Monthly</span>
+            </div>
+          </div>
+          <div class="pricing-features">
+            <div class="feature-item active">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Access to main gym floor</span>
+            </div>
+            <div class="feature-item active">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Free locker & luxury shower access</span>
+            </div>
+            <div class="feature-item active">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Initial fitness orientation</span>
+            </div>
+            <div class="feature-item">
+              <i class="fa-solid fa-circle-xmark"></i>
+              <span>Group fitness & CrossFit classes</span>
+            </div>
+            <div class="feature-item">
+              <i class="fa-solid fa-circle-xmark"></i>
+              <span>Personal trainer sessions</span>
+            </div>
+            <div class="feature-item">
+              <i class="fa-solid fa-circle-xmark"></i>
+              <span>Steam & sauna recovery lounge</span>
+            </div>
+          </div>
+          <button class="btn btn-secondary btn-block" data-open-modal="joinModal" data-plan="Basic">
+            Choose Basic Plan
+          </button>
+        </div>
+
+        <!-- Premium Plan (HIGHLIGHTED) -->
+        <div class="pricing-card featured">
+          <div class="pricing-ribbon">
+            <i class="fa-solid fa-fire"></i> Most Popular
+          </div>
+          <div class="pricing-header">
+            <h3 class="pricing-plan-name">Premium</h3>
+            <p class="pricing-desc">The ultimate comprehensive membership for committed fitness enthusiasts.</p>
+            <div class="pricing-price-box">
+              <span class="pricing-currency">₹</span>
+              <span class="pricing-amount" data-monthly="1,999" data-annual="1,599">1,999</span>
+              <span class="pricing-duration">/ Monthly</span>
+            </div>
+          </div>
+          <div class="pricing-features">
+            <div class="feature-item active">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Full 24/7 unlimited gym access</span>
+            </div>
+            <div class="feature-item active">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>All CrossFit, HIIT & Yoga group classes</span>
+            </div>
+            <div class="feature-item active">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Steam room & sauna recovery</span>
+            </div>
+            <div class="feature-item active">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>2 Complimentary Personal Trainer sessions</span>
+            </div>
+            <div class="feature-item active">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Bi-monthly body composition scans</span>
+            </div>
+            <div class="feature-item">
+              <i class="fa-solid fa-circle-xmark"></i>
+              <span>Dedicated private locker with towel service</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block" data-open-modal="joinModal" data-plan="Premium">
+            <i class="fa-solid fa-bolt"></i> Get Premium Plan
+          </button>
+        </div>
+
+        <!-- Elite Plan -->
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h3 class="pricing-plan-name">Elite</h3>
+            <p class="pricing-desc">VIP athletic treatment with dedicated coaching and nutrition.</p>
+            <div class="pricing-price-box">
+              <span class="pricing-currency">₹</span>
+              <span class="pricing-amount" data-monthly="3,499" data-annual="2,799">3,499</span>
+              <span class="pricing-duration">/ Monthly</span>
+            </div>
+          </div>
+          <div class="pricing-features">
+            <div class="feature-item active">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Everything in Premium included</span>
+            </div>
+            <div class="feature-item active">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>8 Dedicated 1-on-1 PT sessions / month</span>
+            </div>
+            <div class="feature-item active">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Custom nutrition & macronutrient coaching</span>
+            </div>
+            <div class="feature-item active">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Private VIP locker & fresh laundry service</span>
+            </div>
+            <div class="feature-item active">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Unlimited guest passes (2 per month)</span>
+            </div>
+            <div class="feature-item active">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Free daily post-workout protein shake</span>
+            </div>
+          </div>
+          <button class="btn btn-secondary btn-block" data-open-modal="joinModal" data-plan="Elite">
+            Choose Elite Plan
+          </button>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 3.5rem;">
+        <a href="membership.html" class="btn btn-outline-orange">
+          Compare All Features & Benefits In Detail <i class="fa-solid fa-table-list"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       I. TESTIMONIALS SECTION
+       ========================================================================== -->
+  <section class="section section-bg-dark" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <i class="fa-solid fa-star"></i> Real Transformations
+        </div>
+        <h2 class="section-title">WHAT OUR <span class="text-orange">MEMBERS SAY</span></h2>
+        <p class="section-description">
+          Read genuine reviews from beginners who discovered their power and seasoned lifters who smashed their limits at IRONCORE.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <i class="fa-solid fa-quote-right testimonial-quote-icon"></i>
+          <div>
+            <div class="testimonial-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "Joining IRONCORE is hands-down the best investment I've made for my health. The trainers know biomechanics inside out. I shed 14 kg in 5 months while adding noticeable muscle. The atmosphere is purely electric!"
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Rahul Sharma" class="author-avatar">
+            <div>
+              <h4 class="author-name">Rahul Sharma</h4>
+              <span class="author-role">Member for 2 Years • Lost 14kg</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <i class="fa-solid fa-quote-right testimonial-quote-icon"></i>
+          <div>
+            <div class="testimonial-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "As a female beginner, traditional gyms felt intimidating. IRONCORE is completely different. Maya and David helped me master barbell squats with zero judgment. The community here pushes you with kindness and grit."
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" alt="Priya Patel" class="author-avatar">
+            <div>
+              <h4 class="author-name">Priya Patel</h4>
+              <span class="author-role">CrossFit & Yoga Member</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <i class="fa-solid fa-quote-right testimonial-quote-icon"></i>
+          <div>
+            <div class="testimonial-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "The equipment is top of the line—Eleiko plates, calibrated bars, and dumbbell racks that go up to 60 kg. Recovery sauna after heavy deadlifts is game-changing. Truly a world-class training arena."
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="Arjun Verma" class="author-avatar">
+            <div>
+              <h4 class="author-name">Arjun Verma</h4>
+              <span class="author-role">State Powerlifter • Elite Member</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       J. CALL-TO-ACTION SECTION
+       ========================================================================== -->
+  <section class="section" style="padding: 4rem 0 6.5rem 0;">
+    <div class="container">
+      <div class="cta-banner">
+        <div class="cta-banner-bg"></div>
+        <div class="cta-banner-content">
+          <div class="section-tag" style="background: rgba(255, 90, 31, 0.2);">
+            <i class="fa-solid fa-stopwatch"></i> Limited Spots This Month
+          </div>
+          <h2 class="cta-title">YOUR FITNESS JOURNEY <br><span class="text-orange">STARTS TODAY.</span></h2>
+          <p class="cta-subtitle">
+            Don't wait for Monday. Book your free 1-on-1 assessment and facility tour today. Experience what makes IRONCORE unlike any other gym.
+          </p>
+          <div class="cta-buttons">
+            <button class="btn btn-primary btn-lg" data-open-modal="joinModal" data-plan="Premium">
+              <i class="fa-solid fa-bolt"></i> JOIN IRONCORE
+            </button>
+            <button class="btn btn-secondary btn-lg whatsapp-trigger">
+              <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       K. FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand -->
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand">
+            <div class="nav-brand-icon">
+              <i class="fa-solid fa-dumbbell"></i>
+            </div>
+            <span>IRON<span class="brand-accent">CORE</span></span>
+          </a>
+          <p>
+            IRONCORE FITNESS is a premium strength, conditioning, and wellness club built for people who refuse to compromise on their goals. Premium equipment, elite coaches, and relentless drive.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://instagram.com" target="_blank" class="footer-social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" class="footer-social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://youtube.com" target="_blank" class="footer-social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://twitter.com" target="_blank" class="footer-social-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" class="footer-nav-link">Home</a></li>
+            <li><a href="about.html" class="footer-nav-link">About Us</a></li>
+            <li><a href="programs.html" class="footer-nav-link">Fitness Programs</a></li>
+            <li><a href="trainers.html" class="footer-nav-link">Expert Trainers</a></li>
+            <li><a href="membership.html" class="footer-nav-link">Membership Pricing</a></li>
+            <li><a href="gallery.html" class="footer-nav-link">Gym Photo Gallery</a></li>
+            <li><a href="contact.html" class="footer-nav-link">Contact & Location</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Workout Programs -->
+        <div>
+          <h4 class="footer-col-title">Programs</h4>
+          <ul class="footer-nav-list">
+            <li><a href="programs.html#weight-training" class="footer-nav-link">Weight Training</a></li>
+            <li><a href="programs.html#cardio-training" class="footer-nav-link">Cardio & HIIT</a></li>
+            <li><a href="programs.html#personal-training" class="footer-nav-link">Personal Training</a></li>
+            <li><a href="programs.html#crossfit" class="footer-nav-link">CrossFit WOD</a></li>
+            <li><a href="programs.html#yoga-flexibility" class="footer-nav-link">Yoga & Mobility</a></li>
+            <li><a href="programs.html#strength-training" class="footer-nav-link">Powerlifting & Strength</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Hours -->
+        <div>
+          <h4 class="footer-col-title">Contact Info</h4>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>Ironcore Arena, 42 Olympic Boulevard, Metro City, 600001</div>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <div>+91 98765 43210 / +91 98765 43211</div>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>info@ironcorefitness.com</div>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-clock"></i>
+              <div>Mon - Sat: 5:00 AM - 11:00 PM<br>Sun: 6:00 AM - 8:00 PM</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 IRONCORE FITNESS. All Rights Reserved. Built with pride for champions.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#" class="footer-nav-link">Privacy Policy</a>
+          <a href="#" class="footer-nav-link">Terms of Service</a>
+          <a href="#" class="footer-nav-link">Gym Rules</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       JOIN NOW / ENQUIRY MODAL
+       ========================================================================== -->
+  <div class="modal-overlay" id="joinModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 style="font-size: 1.5rem; text-transform: uppercase;">
+          JOIN <span style="color: var(--color-accent);">IRONCORE FITNESS</span>
+        </h3>
+        <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-top: 4px;">
+          Claim your free consultation & 1-day pass. Our coaches will set up your session.
+        </p>
+        <button class="modal-close" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <form id="joinForm">
+          <div class="bmi-form-group">
+            <label class="form-label" for="modalName">Full Name *</label>
+            <input type="text" id="modalName" name="modalName" class="form-control" placeholder="e.g. John Doe" required>
+          </div>
+
+          <div class="bmi-form-row">
+            <div class="bmi-form-group">
+              <label class="form-label" for="modalEmail">Email Address *</label>
+              <input type="email" id="modalEmail" name="modalEmail" class="form-control" placeholder="john@example.com" required>
+            </div>
+            <div class="bmi-form-group">
+              <label class="form-label" for="modalPhone">Phone / WhatsApp *</label>
+              <input type="tel" id="modalPhone" name="modalPhone" class="form-control" placeholder="+91 98765 43210" required>
+            </div>
+          </div>
+
+          <div class="bmi-form-row">
+            <div class="bmi-form-group">
+              <label class="form-label" for="modalPlan">Preferred Membership</label>
+              <select id="modalPlan" name="modalPlan" class="form-control">
+                <option value="Premium" selected>Premium Plan (₹1,999/mo) - Most Popular</option>
+                <option value="Basic">Basic Plan (₹999/mo)</option>
+                <option value="Elite">Elite Plan (₹3,499/mo)</option>
+                <option value="Trial Pass">1-Day Free Trial Pass</option>
+              </select>
+            </div>
+            <div class="bmi-form-group">
+              <label class="form-label" for="modalProgram">Primary Goal / Program</label>
+              <select id="modalProgram" name="modalProgram" class="form-control">
+                <option value="General Fitness">General Fitness & Health</option>
+                <option value="Weight Training">Weight & Muscle Training</option>
+                <option value="Cardio Training">Fat Loss & Cardio</option>
+                <option value="Personal Training">1-on-1 Personal Coaching</option>
+                <option value="CrossFit">CrossFit & High Intensity</option>
+                <option value="Yoga & Flexibility">Yoga & Flexibility</option>
+                <option value="Strength Training">Powerlifting / Strength</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+            <button type="submit" class="btn btn-primary btn-block">
+              <i class="fa-solid fa-check"></i> Submit Membership Enquiry
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp CTA -->
+  <div class="floating-whatsapp" title="Chat with us on WhatsApp" aria-label="WhatsApp Chat">
+    <i class="fa-brands fa-whatsapp"></i>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/calculator.js"></script>
+
+</body>
+</html>

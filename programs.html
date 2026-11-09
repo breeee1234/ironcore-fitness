@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workout Programs | IRONCORE FITNESS - High-Performance Training</title>
+  <meta name="description" content="Explore signature fitness programs at IRONCORE FITNESS: Weight Training, Cardio, Personal Training, CrossFit, Yoga, and Strength Training.">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FF5A1F'><path d='M20.57 14.86L22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z'/></svg>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand">
+        <div class="nav-brand-icon">
+          <i class="fa-solid fa-dumbbell"></i>
+        </div>
+        <span>IRON<span class="brand-accent">CORE</span></span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="programs.html" class="nav-link active">Programs</a></li>
+        <li><a href="trainers.html" class="nav-link">Trainers</a></li>
+        <li><a href="membership.html" class="nav-link">Membership</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#joinModal" class="btn btn-primary btn-sm" data-open-modal="joinModal" data-plan="Premium">
+          <i class="fa-solid fa-bolt"></i> Join Now
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-overlay" id="mobileOverlay">
+    <div class="mobile-nav-drawer">
+      <div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+          <div class="nav-brand" style="font-size: 1.4rem;">
+            <div class="nav-brand-icon" style="width: 36px; height: 36px; font-size: 1rem;">
+              <i class="fa-solid fa-dumbbell"></i>
+            </div>
+            <span>IRON<span class="brand-accent">CORE</span></span>
+          </div>
+          <button class="mobile-nav-close" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <div class="mobile-nav-links">
+          <a href="index.html" class="mobile-nav-link">Home</a>
+          <a href="about.html" class="mobile-nav-link">About Us</a>
+          <a href="programs.html" class="mobile-nav-link active">Programs</a>
+          <a href="trainers.html" class="mobile-nav-link">Trainers</a>
+          <a href="membership.html" class="mobile-nav-link">Membership</a>
+          <a href="gallery.html" class="mobile-nav-link">Gallery</a>
+          <a href="contact.html" class="mobile-nav-link">Contact</a>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem;">
+        <button class="btn btn-primary btn-block" data-open-modal="joinModal" data-plan="Premium">
+          <i class="fa-solid fa-bolt"></i> Join IRONCORE
+        </button>
+        <button class="btn btn-secondary btn-block whatsapp-trigger">
+          <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Subpage Hero Header -->
+  <header class="subpage-hero">
+    <div class="subpage-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1920&q=80');"></div>
+    <div class="subpage-hero-overlay"></div>
+    <div class="container">
+      <div class="subpage-hero-content">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-angle-right" style="font-size: 0.75rem;"></i>
+          <span class="current">Programs</span>
+        </div>
+        <h1 style="margin-bottom: 1rem;">ELITE TRAINING <br><span style="color: var(--color-accent);">PROGRAMS</span></h1>
+        <p style="font-size: 1.15rem; color: var(--color-text-muted);">
+          Evidence-based workout regimens engineered to maximize strength, incinerate body fat, and build unstoppable endurance.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Filter Pills -->
+  <section class="section" style="padding-bottom: 2rem;">
+    <div class="container">
+      <div class="gallery-filter" id="programFilter">
+        <button class="filter-btn active" data-filter="all">All Programs</button>
+        <button class="filter-btn" data-filter="strength">Strength & Hypertrophy</button>
+        <button class="filter-btn" data-filter="cardio">Cardio & HIIT</button>
+        <button class="filter-btn" data-filter="functional">Functional & CrossFit</button>
+        <button class="filter-btn" data-filter="mobility">Yoga & Flexibility</button>
+        <button class="filter-btn" data-filter="personal">Personal Coaching</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Programs List -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div style="display: flex; flex-direction: column; gap: 3.5rem;">
+
+        <!-- 1. Weight Training -->
+        <div class="program-detail-card why-card" id="weight-training" data-category="strength" style="display: block; aspect-ratio: auto; cursor: default; padding: 2.5rem;">
+          <div style="display: grid; grid-template-columns: 1fr 1.3fr; gap: 3rem; align-items: center;">
+            <div style="position: relative; border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 4/3;">
+              <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80" alt="Weight Training" style="width: 100%; height: 100%; object-fit: cover;">
+              <span class="program-badge" style="position: absolute; top: 1rem; left: 1rem;">Hypertrophy</span>
+            </div>
+            <div>
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.8rem;">
+                <span style="font-size: 0.85rem; color: var(--color-accent); font-weight: 700; background: var(--color-accent-subtle); padding: 4px 12px; border-radius: 20px;">All Fitness Levels</span>
+                <span style="font-size: 0.85rem; color: var(--color-text-muted);"><i class="fa-solid fa-stopwatch"></i> 60 Min Sessions</span>
+                <span style="font-size: 0.85rem; color: var(--color-text-muted);"><i class="fa-solid fa-fire"></i> 450 - 650 kcal</span>
+              </div>
+              <h2 style="font-size: 2rem; margin-bottom: 1rem;">Weight Training & Hypertrophy</h2>
+              <p style="color: var(--color-text-muted); margin-bottom: 1.5rem; line-height: 1.7;">
+                Our weight training program is designed around progressive mechanical tension and compound overload. Whether your goal is sculpting aesthetic lean muscle mass, correcting muscle imbalances, or building bone density, our coaches teach you biomechanically sound form on barbells, dumbbells, and cable systems.
+              </p>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-bottom: 2rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.92rem;"><i class="fa-solid fa-circle-check" style="color: var(--color-accent);"></i> Compound movement mastery</div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.92rem;"><i class="fa-solid fa-circle-check" style="color: var(--color-accent);"></i> Periodized hypertrophy blocks</div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.92rem;"><i class="fa-solid fa-circle-check" style="color: var(--color-accent);"></i> Injury prevention protocols</div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.92rem;"><i class="fa-solid fa-circle-check" style="color: var(--color-accent);"></i> Logged progressive overload</div>
+              </div>
+              <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                <button class="btn btn-primary" data-open-modal="joinModal" data-program="Weight Training">
+                  <i class="fa-solid fa-bolt"></i> Join This Program
+                </button>
+                <button class="btn btn-secondary whatsapp-trigger" data-wa-plan="Weight Training">
+                  <i class="fa-brands fa-whatsapp"></i> Ask Coach on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Cardio Training -->
+        <div class="program-detail-card why-card" id="cardio-training" data-category="cardio" style="display: block; aspect-ratio: auto; cursor: default; padding: 2.5rem;">
+          <div style="display: grid; grid-template-columns: 1fr 1.3fr; gap: 3rem; align-items: center;">
+            <div style="position: relative; border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 4/3;">
+              <img src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&w=800&q=80" alt="Cardio Training" style="width: 100%; height: 100%; object-fit: cover;">
+              <span class="program-badge" style="position: absolute; top: 1rem; left: 1rem;">Endurance</span>
+            </div>
+            <div>
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.8rem;">
+                <span style="font-size: 0.85rem; color: var(--color-accent); font-weight: 700; background: var(--color-accent-subtle); padding: 4px 12px; border-radius: 20px;">Heart Health & Fat Loss</span>
+                <span style="font-size: 0.85rem; color: var(--color-text-muted);"><i class="fa-solid fa-stopwatch"></i> 45 - 60 Min Sessions</span>
+                <span style="font-size: 0.85rem; color: var(--color-text-muted);"><i class="fa-solid fa-fire"></i> 600 - 850 kcal</span>
+              </div>
+              <h2 style="font-size: 2rem; margin-bottom: 1rem;">Cardio & High-Intensity Conditioning</h2>
+              <p style="color: var(--color-text-muted); margin-bottom: 1.5rem; line-height: 1.7;">
+                Ditch boring steady-state treadmill jogs. Our cardiovascular suite incorporates interval heart-rate zone training, curved Woodway sprinters, Concept2 rowing intervals, and airbike power bursts that rev up your post-exercise oxygen consumption (EPOC) for all-day calorie burning.
+              </p>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-bottom: 2rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.92rem;"><i class="fa-solid fa-circle-check" style="color: var(--color-accent);"></i> VO2 Max boost & stamina</div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.92rem;"><i class="fa-solid fa-circle-check" style="color: var(--color-accent);"></i> Rapid stubborn fat reduction</div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.92rem;"><i class="fa-solid fa-circle-check" style="color: var(--color-accent);"></i> Cardiovascular longevity</div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.92rem;"><i class="fa-solid fa-circle-check" style="color: var(--color-accent);"></i> Real-time heart-rate tracking</div>
+              </div>
+              <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                <button class="btn btn-primary" data-open-modal="joinModal" data-program="Cardio Training">
+                  <i class="fa-solid fa-bolt"></i> Join This Program
+                </button>
+                <button class="btn btn-secondary whatsapp-trigger" data-wa-plan="Cardio Training">
+                  <i class="fa-brands fa-whatsapp"></i> Ask Coach on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Personal Training -->
+        <div class="program-detail-card why-card" id="personal-training" data-category="personal" style="display: block; aspect-ratio: auto; cursor: default; padding: 2.5rem;">
+          <div style="display: grid; grid-template-columns: 1fr 1.3fr; gap: 3rem; align-items: center;">
+            <div style="position: relative; border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 4/3;">
+              <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=800&q=80" alt="Personal Training" style="width: 100%; height: 100%; object-fit: cover;">
+              <span class="program-badge" style="position: absolute; top: 1rem; left: 1rem;">1-on-1 Elite</span>
+            </div>
+            <div>
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.8rem;">
+                <span style="font-size: 0.85rem; color: var(--color-accent); font-weight: 700; background: var(--color-accent-subtle); padding: 4px 12px; border-radius: 20px;">Dedicated Mentor</span>
+                <span style="font-size: 0.85rem; color: var(--color-text-muted);"><i class="fa-solid fa-stopwatch"></i> 60 Min Private</span>
+                <span style="font-size: 0.85rem; color: var(--color-text-muted);"><i class="fa-solid fa-bullseye"></i> 100% Tailored</span>
+              </div>
+              <h2 style="font-size: 2rem; margin-bottom: 1rem;">Personal Training & Nutrition Coaching</h2>
+              <p style="color: var(--color-text-muted); margin-bottom: 1.5rem; line-height: 1.7;">
+                The fastest, most accountable path to radical physical transformation. You are paired with a senior coach who assesses your joint mobility, metabolic baseline, and lifestyle constraints to build an agile training regimen and daily meal strategy with weekly progress scans.
+              </p>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-bottom: 2rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.92rem;"><i class="fa-solid fa-circle-check" style="color: var(--color-accent);"></i> 1-on-1 personalized attention</div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.92rem;"><i class="fa-solid fa-circle-check" style="color: var(--color-accent);"></i> Custom macronutrient blueprint</div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.92rem;"><i class="fa-solid fa-circle-check" style="color: var(--color-accent);"></i> Weekly 3D InBody body scans</div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.92rem;"><i class="fa-solid fa-circle-check" style="color: var(--color-accent);"></i> 24/7 coach WhatsApp support</div>
+              </div>
+              <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                <button class="btn btn-primary" data-open-modal="joinModal" data-program="Personal Training">
+                  <i class="fa-solid fa-bolt"></i> Book 1-on-1 Consultation
+                </button>
+                <button class="btn btn-secondary whatsapp-trigger" data-wa-plan="Personal Training">
+                  <i class="fa-brands fa-whatsapp"></i> Chat with Head Coach
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. CrossFit -->
+        <div class="program-detail-card why-card" id="crossfit" data-category="functional" style="display: block; aspect-ratio: auto; cursor: default; padding: 2.5rem;">
+          <div style="display: grid; grid-template-columns: 1fr 1.3fr; gap: 3rem; align-items: center;">
+            <div style="position: relative; border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 4/3;">
+              <img src="https://images.unsplash.com/photo-1517963879433-6ad2b056d712?auto=format&fit=crop&w=800&q=80" alt="CrossFit" style="width: 100%; height: 100%; object-fit: cover;">
+              <span class="program-badge" style="position: absolute; top: 1rem; left: 1rem;">Community WOD</span>
+            </div>
+            <div>
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.8rem;">
+                <span style="font-size: 0.85rem; color: var(--color-accent); font-weight: 700; background: var(--color-accent-subtle); padding: 4px 12px; border-radius: 20px;">High Energy</span>
+                <span style="font-size: 0.85rem; color: var(--color-text-muted);"><i class="fa-solid fa-stopwatch"></i> 60 Min Sessions</span>
+                <span style="font-size: 0.85rem; color: var(--color-text-muted);"><i class="fa-solid fa-fire"></i> 700 - 900 kcal</span>
+              </div>
+              <h2 style="font-size: 2rem; margin-bottom: 1rem;">CrossFit & Functional Fitness</h2>
+              <p style="color: var(--color-text-muted); margin-bottom: 1.5rem; line-height: 1.7;">
+                Constantly varied, functional movements performed at high intensity. In our dedicated functional arena, athletes tackle Workouts of the Day (WODs) that combine gymnastic pull-ups, Olympic snatches, kettlebell swings, box jumps, and sled pushes in a thrilling team setting.
+              </p>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-bottom: 2rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.92rem;"><i class="fa-solid fa-circle-check" style="color: var(--color-accent);"></i> Explosive athletic power</div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.92rem;"><i class="fa-solid fa-circle-check" style="color: var(--color-accent);"></i> Scalable for any fitness level</div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.92rem;"><i class="fa-solid fa-circle-check" style="color: var(--color-accent);"></i> Electrifying team camaraderie</div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.92rem;"><i class="fa-solid fa-circle-check" style="color: var(--color-accent);"></i> Daily leaderboard & PR boards</div>
+              </div>
+              <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                <button class="btn btn-primary" data-open-modal="joinModal" data-program="CrossFit">
+                  <i class="fa-solid fa-bolt"></i> Join This Program
+                </button>
+                <button class="btn btn-secondary whatsapp-trigger" data-wa-plan="CrossFit">
+                  <i class="fa-brands fa-whatsapp"></i> Ask Coach on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Yoga & Flexibility -->
+        <div class="program-detail-card why-card" id="yoga-flexibility" data-category="mobility" style="display: block; aspect-ratio: auto; cursor: default; padding: 2.5rem;">
+          <div style="display: grid; grid-template-columns: 1fr 1.3fr; gap: 3rem; align-items: center;">
+            <div style="position: relative; border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 4/3;">
+              <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80" alt="Yoga & Flexibility" style="width: 100%; height: 100%; object-fit: cover;">
+              <span class="program-badge" style="position: absolute; top: 1rem; left: 1rem;">Mind & Recovery</span>
+            </div>
+            <div>
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.8rem;">
+                <span style="font-size: 0.85rem; color: var(--color-accent); font-weight: 700; background: var(--color-accent-subtle); padding: 4px 12px; border-radius: 20px;">Restorative & Flow</span>
+                <span style="font-size: 0.85rem; color: var(--color-text-muted);"><i class="fa-solid fa-stopwatch"></i> 60 Min Sessions</span>
+                <span style="font-size: 0.85rem; color: var(--color-text-muted);"><i class="fa-solid fa-spa"></i> Stress Relief</span>
+              </div>
+              <h2 style="font-size: 2rem; margin-bottom: 1rem;">Yoga & Mobility Training</h2>
+              <p style="color: var(--color-text-muted); margin-bottom: 1.5rem; line-height: 1.7;">
+                The perfect antidote to heavy lifting and desk-bound posture. Our Vinyasa, Hatha, and restorative mobility classes unlock tight hip flexors, alleviate lumbar pressure, enhance shoulder range of motion, and sharpen mental resilience through conscious breathing.
+              </p>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-bottom: 2rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.92rem;"><i class="fa-solid fa-circle-check" style="color: var(--color-accent);"></i> Joint decompression & mobility</div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.92rem;"><i class="fa-solid fa-circle-check" style="color: var(--color-accent);"></i> Deep myofascial release</div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.92rem;"><i class="fa-solid fa-circle-check" style="color: var(--color-accent);"></i> Nervous system regulation</div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.92rem;"><i class="fa-solid fa-circle-check" style="color: var(--color-accent);"></i> Enhanced athletic posture</div>
+              </div>
+              <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                <button class="btn btn-primary" data-open-modal="joinModal" data-program="Yoga & Flexibility">
+                  <i class="fa-solid fa-bolt"></i> Join This Program
+                </button>
+                <button class="btn btn-secondary whatsapp-trigger" data-wa-plan="Yoga & Flexibility">
+                  <i class="fa-brands fa-whatsapp"></i> Ask Coach on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Strength Training -->
+        <div class="program-detail-card why-card" id="strength-training" data-category="strength" style="display: block; aspect-ratio: auto; cursor: default; padding: 2.5rem;">
+          <div style="display: grid; grid-template-columns: 1fr 1.3fr; gap: 3rem; align-items: center;">
+            <div style="position: relative; border-radius: var(--radius-lg); overflow: hidden; aspect-ratio: 4/3;">
+              <img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?auto=format&fit=crop&w=800&q=80" alt="Strength Training" style="width: 100%; height: 100%; object-fit: cover;">
+              <span class="program-badge" style="position: absolute; top: 1rem; left: 1rem;">Powerlifting</span>
+            </div>
+            <div>
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.8rem;">
+                <span style="font-size: 0.85rem; color: var(--color-accent); font-weight: 700; background: var(--color-accent-subtle); padding: 4px 12px; border-radius: 20px;">Raw Power & PRs</span>
+                <span style="font-size: 0.85rem; color: var(--color-text-muted);"><i class="fa-solid fa-stopwatch"></i> 75 Min Sessions</span>
+                <span style="font-size: 0.85rem; color: var(--color-text-muted);"><i class="fa-solid fa-trophy"></i> Elite Platforms</span>
+              </div>
+              <h2 style="font-size: 2rem; margin-bottom: 1rem;">Powerlifting & Raw Strength</h2>
+              <p style="color: var(--color-text-muted); margin-bottom: 1.5rem; line-height: 1.7;">
+                Dedicated to the big three: Squat, Bench Press, and Deadlift. Coached by competitive national-level lifters, you will dial in bar path, bracing techniques, competition grip styles, and peak neurological force generation to break personal records safely.
+              </p>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-bottom: 2rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.92rem;"><i class="fa-solid fa-circle-check" style="color: var(--color-accent);"></i> Calibrated competition barbells</div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.92rem;"><i class="fa-solid fa-circle-check" style="color: var(--color-accent);"></i> Strict barbell velocity tracking</div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.92rem;"><i class="fa-solid fa-circle-check" style="color: var(--color-accent);"></i> Meet preparation cycles</div>
+                <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.92rem;"><i class="fa-solid fa-circle-check" style="color: var(--color-accent);"></i> High-density shock-absorbing floors</div>
+              </div>
+              <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                <button class="btn btn-primary" data-open-modal="joinModal" data-program="Strength Training">
+                  <i class="fa-solid fa-bolt"></i> Join This Program
+                </button>
+                <button class="btn btn-secondary whatsapp-trigger" data-wa-plan="Strength Training">
+                  <i class="fa-brands fa-whatsapp"></i> Ask Coach on WhatsApp
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section" style="padding: 2rem 0 6rem 0;">
+    <div class="container">
+      <div class="cta-banner">
+        <div class="cta-banner-bg"></div>
+        <div class="cta-banner-content">
+          <h2 class="cta-title">NOT SURE WHICH PROGRAM <br><span class="text-orange">SUITS YOU BEST?</span></h2>
+          <p class="cta-subtitle">
+            Take our free consultation with an IRONCORE Head Coach. We analyze your body composition, history, and goals to recommend the perfect pathway.
+          </p>
+          <div class="cta-buttons">
+            <button class="btn btn-primary btn-lg" data-open-modal="joinModal" data-program="General Fitness">
+              <i class="fa-solid fa-calendar-check"></i> Book Free Fitness Assessment
+            </button>
+            <button class="btn btn-secondary btn-lg whatsapp-trigger">
+              <i class="fa-brands fa-whatsapp"></i> Talk to a Coach on WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand">
+            <div class="nav-brand-icon">
+              <i class="fa-solid fa-dumbbell"></i>
+            </div>
+            <span>IRON<span class="brand-accent">CORE</span></span>
+          </a>
+          <p>
+            IRONCORE FITNESS is a premium strength, conditioning, and wellness club built for people who refuse to compromise on their goals.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://instagram.com" target="_blank" class="footer-social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" class="footer-social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://youtube.com" target="_blank" class="footer-social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://twitter.com" target="_blank" class="footer-social-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" class="footer-nav-link">Home</a></li>
+            <li><a href="about.html" class="footer-nav-link">About Us</a></li>
+            <li><a href="programs.html" class="footer-nav-link">Fitness Programs</a></li>
+            <li><a href="trainers.html" class="footer-nav-link">Expert Trainers</a></li>
+            <li><a href="membership.html" class="footer-nav-link">Membership Pricing</a></li>
+            <li><a href="gallery.html" class="footer-nav-link">Gym Photo Gallery</a></li>
+            <li><a href="contact.html" class="footer-nav-link">Contact & Location</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Programs</h4>
+          <ul class="footer-nav-list">
+            <li><a href="programs.html#weight-training" class="footer-nav-link">Weight Training</a></li>
+            <li><a href="programs.html#cardio-training" class="footer-nav-link">Cardio & HIIT</a></li>
+            <li><a href="programs.html#personal-training" class="footer-nav-link">Personal Training</a></li>
+            <li><a href="programs.html#crossfit" class="footer-nav-link">CrossFit WOD</a></li>
+            <li><a href="programs.html#yoga-flexibility" class="footer-nav-link">Yoga & Mobility</a></li>
+            <li><a href="programs.html#strength-training" class="footer-nav-link">Powerlifting & Strength</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contact Info</h4>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>Ironcore Arena, 42 Olympic Boulevard, Metro City, 600001</div>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <div>+91 98765 43210 / +91 98765 43211</div>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>info@ironcorefitness.com</div>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-clock"></i>
+              <div>Mon - Sat: 5:00 AM - 11:00 PM<br>Sun: 6:00 AM - 8:00 PM</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 IRONCORE FITNESS. All Rights Reserved.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#" class="footer-nav-link">Privacy Policy</a>
+          <a href="#" class="footer-nav-link">Terms of Service</a>
+          <a href="#" class="footer-nav-link">Gym Rules</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Join Modal -->
+  <div class="modal-overlay" id="joinModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 style="font-size: 1.5rem; text-transform: uppercase;">
+          REGISTER FOR <span style="color: var(--color-accent);">PROGRAM</span>
+        </h3>
+        <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-top: 4px;">
+          Lock in your program spot and schedule an initial coach assessment.
+        </p>
+        <button class="modal-close" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <form id="joinForm">
+          <div class="bmi-form-group">
+            <label class="form-label" for="modalName">Full Name *</label>
+            <input type="text" id="modalName" name="modalName" class="form-control" placeholder="e.g. John Doe" required>
+          </div>
+
+          <div class="bmi-form-row">
+            <div class="bmi-form-group">
+              <label class="form-label" for="modalEmail">Email Address *</label>
+              <input type="email" id="modalEmail" name="modalEmail" class="form-control" placeholder="john@example.com" required>
+            </div>
+            <div class="bmi-form-group">
+              <label class="form-label" for="modalPhone">Phone / WhatsApp *</label>
+              <input type="tel" id="modalPhone" name="modalPhone" class="form-control" placeholder="+91 98765 43210" required>
+            </div>
+          </div>
+
+          <div class="bmi-form-row">
+            <div class="bmi-form-group">
+              <label class="form-label" for="modalPlan">Preferred Membership</label>
+              <select id="modalPlan" name="modalPlan" class="form-control">
+                <option value="Premium" selected>Premium Plan (₹1,999/mo) - Recommended</option>
+                <option value="Basic">Basic Plan (₹999/mo)</option>
+                <option value="Elite">Elite Plan (₹3,499/mo)</option>
+                <option value="Trial Pass">1-Day Free Trial Pass</option>
+              </select>
+            </div>
+            <div class="bmi-form-group">
+              <label class="form-label" for="modalProgram">Selected Program</label>
+              <select id="modalProgram" name="modalProgram" class="form-control">
+                <option value="Weight Training">Weight Training</option>
+                <option value="Cardio Training">Cardio Training</option>
+                <option value="Personal Training">Personal Training</option>
+                <option value="CrossFit">CrossFit & Functional</option>
+                <option value="Yoga & Flexibility">Yoga & Flexibility</option>
+                <option value="Strength Training">Powerlifting / Strength</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="margin-top: 1.5rem;">
+            <button type="submit" class="btn btn-primary btn-block">
+              <i class="fa-solid fa-check"></i> Submit Program Registration
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="floating-whatsapp" title="Chat with us on WhatsApp" aria-label="WhatsApp Chat">
+    <i class="fa-brands fa-whatsapp"></i>
+  </div>
+
+  <button class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>

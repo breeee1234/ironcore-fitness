@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membership Pricing & Plans | IRONCORE FITNESS</title>
+  <meta name="description" content="Explore flexible membership tiers at IRONCORE FITNESS. Basic (₹999), Premium (₹1,999), and Elite (₹3,499) with full 24/7 access, sauna, and coaching.">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FF5A1F'><path d='M20.57 14.86L22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z'/></svg>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Specific styles for FAQ and Comparison Table */
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+      background: var(--color-surface);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+    }
+    .compare-table th, .compare-table td {
+      padding: 1.2rem 1.5rem;
+      text-align: center;
+      border-bottom: 1px solid var(--color-border);
+      font-size: 0.95rem;
+    }
+    .compare-table th {
+      background: var(--color-secondary);
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      font-size: 1.1rem;
+      color: #FFFFFF;
+    }
+    .compare-table th:first-child, .compare-table td:first-child {
+      text-align: left;
+      font-weight: 600;
+    }
+    .compare-table th.col-featured {
+      background: rgba(255, 90, 31, 0.15);
+      color: var(--color-accent);
+      border-top: 3px solid var(--color-accent);
+    }
+    .compare-table td.col-featured {
+      background: rgba(255, 90, 31, 0.04);
+      font-weight: 700;
+    }
+    .faq-container {
+      max-width: 820px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    .faq-item {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: all var(--transition-fast);
+    }
+    .faq-item.active {
+      border-color: var(--color-accent);
+    }
+    .faq-question {
+      width: 100%;
+      background: transparent;
+      border: none;
+      padding: 1.4rem 1.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #FFFFFF;
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-align: left;
+    }
+    .faq-icon {
+      color: var(--color-accent);
+      font-size: 1.1rem;
+      transition: transform var(--transition-fast);
+    }
+    .faq-answer {
+      display: none;
+      padding: 0 1.8rem 1.5rem 1.8rem;
+      color: var(--color-text-muted);
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand">
+        <div class="nav-brand-icon">
+          <i class="fa-solid fa-dumbbell"></i>
+        </div>
+        <span>IRON<span class="brand-accent">CORE</span></span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="programs.html" class="nav-link">Programs</a></li>
+        <li><a href="trainers.html" class="nav-link">Trainers</a></li>
+        <li><a href="membership.html" class="nav-link active">Membership</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#joinModal" class="btn btn-primary btn-sm" data-open-modal="joinModal" data-plan="Premium">
+          <i class="fa-solid fa-bolt"></i> Join Now
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-overlay" id="mobileOverlay">
+    <div class="mobile-nav-drawer">
+      <div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+          <div class="nav-brand" style="font-size: 1.4rem;">
+            <div class="nav-brand-icon" style="width: 36px; height: 36px; font-size: 1rem;">
+              <i class="fa-solid fa-dumbbell"></i>
+            </div>
+            <span>IRON<span class="brand-accent">CORE</span></span>
+          </div>
+          <button class="mobile-nav-close" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <div class="mobile-nav-links">
+          <a href="index.html" class="mobile-nav-link">Home</a>
+          <a href="about.html" class="mobile-nav-link">About Us</a>
+          <a href="programs.html" class="mobile-nav-link">Programs</a>
+          <a href="trainers.html" class="mobile-nav-link">Trainers</a>
+          <a href="membership.html" class="mobile-nav-link active">Membership</a>
+          <a href="gallery.html" class="mobile-nav-link">Gallery</a>
+          <a href="contact.html" class="mobile-nav-link">Contact</a>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem;">
+        <button class="btn btn-primary btn-block" data-open-modal="joinModal" data-plan="Premium">
+          <i class="fa-solid fa-bolt"></i> Join IRONCORE
+        </button>
+        <button class="btn btn-secondary btn-block whatsapp-trigger">
+          <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Subpage Hero Header -->
+  <header class="subpage-hero">
+    <div class="subpage-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1920&q=80');"></div>
+    <div class="subpage-hero-overlay"></div>
+    <div class="container">
+      <div class="subpage-hero-content">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-angle-right" style="font-size: 0.75rem;"></i>
+          <span class="current">Membership</span>
+        </div>
+        <h1 style="margin-bottom: 1rem;">INVEST IN YOUR <br><span style="color: var(--color-accent);">GREATEST ASSET</span></h1>
+        <p style="font-size: 1.15rem; color: var(--color-text-muted);">
+          Transparent pricing. World-class facilities. Zero registration sign-up penalties.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Pricing Cards Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <i class="fa-solid fa-crown"></i> Membership Plans
+        </div>
+        <h2 class="section-title">CHOOSE YOUR <span class="text-orange">TIER</span></h2>
+        <p class="section-description">
+          Whether you want independent gym floor access or VIP white-glove personal coaching, we have the perfect membership for you.
+        </p>
+
+        <!-- Monthly / Annual Toggle -->
+        <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 2rem;">
+          <span style="font-weight: 600; color: #FFFFFF;">Monthly</span>
+          <label style="position: relative; display: inline-block; width: 56px; height: 30px; cursor: pointer;">
+            <input type="checkbox" id="billingToggle" style="opacity: 0; width: 0; height: 0;">
+            <span style="position: absolute; inset: 0; background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: 34px; transition: 0.3s;" id="toggleSlider"></span>
+          </label>
+          <span style="font-weight: 600; color: var(--color-text-muted);">
+            Annual <span style="background: var(--color-accent); color: #fff; font-size: 0.72rem; padding: 2px 8px; border-radius: 12px; font-weight: 800; margin-left: 4px;">SAVE 20%</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Basic Plan -->
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h3 class="pricing-plan-name">Basic</h3>
+            <p class="pricing-desc">Ideal for beginners building a consistent routine.</p>
+            <div class="pricing-price-box">
+              <span class="pricing-currency">₹</span>
+              <span class="pricing-amount" data-monthly="999" data-annual="799">999</span>
+              <span class="pricing-duration">/ Monthly</span>
+            </div>
+          </div>
+          <div class="pricing-features">
+            <div class="feature-item active">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Access to main gym floor</span>
+            </div>
+            <div class="feature-item active">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Free locker & luxury shower access</span>
+            </div>
+            <div class="feature-item active">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Initial fitness & equipment orientation</span>
+            </div>
+            <div class="feature-item">
+              <i class="fa-solid fa-circle-xmark"></i>
+              <span>Group fitness & CrossFit classes</span>
+            </div>
+            <div class="feature-item">
+              <i class="fa-solid fa-circle-xmark"></i>
+              <span>Personal trainer sessions</span>
+            </div>
+            <div class="feature-item">
+              <i class="fa-solid fa-circle-xmark"></i>
+              <span>Steam & sauna recovery lounge</span>
+            </div>
+          </div>
+          <button class="btn btn-secondary btn-block" data-open-modal="joinModal" data-plan="Basic">
+            Join Basic Plan
+          </button>
+        </div>
+
+        <!-- Premium Plan (FEATURED) -->
+        <div class="pricing-card featured">
+          <div class="pricing-ribbon">
+            <i class="fa-solid fa-fire"></i> Recommended & Most Popular
+          </div>
+          <div class="pricing-header">
+            <h3 class="pricing-plan-name">Premium</h3>
+            <p class="pricing-desc">Our flagship tier designed for total athletic development.</p>
+            <div class="pricing-price-box">
+              <span class="pricing-currency">₹</span>
+              <span class="pricing-amount" data-monthly="1,999" data-annual="1,599">1,999</span>
+              <span class="pricing-duration">/ Monthly</span>
+            </div>
+          </div>
+          <div class="pricing-features">
+            <div class="feature-item active">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Full 24/7 unlimited gym access</span>
+            </div>
+            <div class="feature-item active">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>All CrossFit, HIIT & Yoga group classes</span>
+            </div>
+            <div class="feature-item active">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Steam room & Scandinavian cedar sauna</span>
+            </div>
+            <div class="feature-item active">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>2 Complimentary 1-on-1 Personal Trainer sessions</span>
+            </div>
+            <div class="feature-item active">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Bi-monthly body composition scans</span>
+            </div>
+            <div class="feature-item">
+              <i class="fa-solid fa-circle-xmark"></i>
+              <span>Dedicated private locker with towel service</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block" data-open-modal="joinModal" data-plan="Premium">
+            <i class="fa-solid fa-bolt"></i> Join Premium Plan
+          </button>
+        </div>
+
+        <!-- Elite Plan -->
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h3 class="pricing-plan-name">Elite</h3>
+            <p class="pricing-desc">The complete VIP athletic experience with dedicated coaching.</p>
+            <div class="pricing-price-box">
+              <span class="pricing-currency">₹</span>
+              <span class="pricing-amount" data-monthly="3,499" data-annual="2,799">3,499</span>
+              <span class="pricing-duration">/ Monthly</span>
+            </div>
+          </div>
+          <div class="pricing-features">
+            <div class="feature-item active">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Everything in Premium tier included</span>
+            </div>
+            <div class="feature-item active">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>8 Dedicated 1-on-1 PT sessions per month</span>
+            </div>
+            <div class="feature-item active">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Custom nutrition & macronutrient blueprint</span>
+            </div>
+            <div class="feature-item active">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Permanent VIP private locker & daily fresh towel</span>
+            </div>
+            <div class="feature-item active">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>2 Monthly guest passes for friends</span>
+            </div>
+            <div class="feature-item active">
+              <i class="fa-solid fa-circle-check"></i>
+              <span>Free daily post-workout shake at the Fuel Bar</span>
+            </div>
+          </div>
+          <button class="btn btn-secondary btn-block" data-open-modal="joinModal" data-plan="Elite">
+            Join Elite Plan
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Complete Feature Comparison Table -->
+  <section class="section section-bg-dark">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <i class="fa-solid fa-table-list"></i> Full Comparison
+        </div>
+        <h2 class="section-title">SIDE-BY-SIDE <span class="text-orange">BENEFITS</span></h2>
+        <p class="section-description">
+          Compare every perk and amenity across our three plans to make an informed decision.
+        </p>
+      </div>
+
+      <div style="overflow-x: auto;">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th style="width: 37%;">Membership Perks</th>
+              <th style="width: 21%;">Basic (₹999)</th>
+              <th style="width: 21%;" class="col-featured">Premium (₹1,999)</th>
+              <th style="width: 21%;">Elite (₹3,499)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Free Weights & Selectorized Machines</td>
+              <td><i class="fa-solid fa-check" style="color: var(--color-accent);"></i> Full Access</td>
+              <td class="col-featured"><i class="fa-solid fa-check" style="color: var(--color-accent);"></i> Full Access</td>
+              <td><i class="fa-solid fa-check" style="color: var(--color-accent);"></i> Full Access</td>
+            </tr>
+            <tr>
+              <td>24/7 Unlimited Facility Access</td>
+              <td>Standard Hours (6am-10pm)</td>
+              <td class="col-featured"><i class="fa-solid fa-check" style="color: var(--color-accent);"></i> 24/7 Keycard</td>
+              <td><i class="fa-solid fa-check" style="color: var(--color-accent);"></i> 24/7 Keycard</td>
+            </tr>
+            <tr>
+              <td>CrossFit, HIIT & Yoga Group Classes</td>
+              <td><i class="fa-solid fa-xmark" style="color: var(--color-text-dim);"></i> Not Included</td>
+              <td class="col-featured"><i class="fa-solid fa-check" style="color: var(--color-accent);"></i> Unlimited</td>
+              <td><i class="fa-solid fa-check" style="color: var(--color-accent);"></i> Unlimited</td>
+            </tr>
+            <tr>
+              <td>Personal Trainer Sessions</td>
+              <td>1 Initial Orientation</td>
+              <td class="col-featured">2 Sessions / Month</td>
+              <td><strong>8 Sessions / Month</strong></td>
+            </tr>
+            <tr>
+              <td>Cedar Sauna & Eucalyptus Steam</td>
+              <td><i class="fa-solid fa-xmark" style="color: var(--color-text-dim);"></i> Not Included</td>
+              <td class="col-featured"><i class="fa-solid fa-check" style="color: var(--color-accent);"></i> Included</td>
+              <td><i class="fa-solid fa-check" style="color: var(--color-accent);"></i> Priority Access</td>
+            </tr>
+            <tr>
+              <td>InBody 3D Composition Scans</td>
+              <td>1 at Signup</td>
+              <td class="col-featured">Every 60 Days</td>
+              <td><strong>Monthly Scan + Consultation</strong></td>
+            </tr>
+            <tr>
+              <td>Nutrition Blueprint & Meal Plans</td>
+              <td><i class="fa-solid fa-xmark" style="color: var(--color-text-dim);"></i> Not Included</td>
+              <td class="col-featured">Basic Macro Guide</td>
+              <td><strong>Bespoke Nutrition Protocol</strong></td>
+            </tr>
+            <tr>
+              <td>Locker & Fresh Towel Service</td>
+              <td>Daily Shared Locker</td>
+              <td class="col-featured">Daily Shared Locker</td>
+              <td><strong>Private VIP Locker + Towel</strong></td>
+            </tr>
+            <tr>
+              <td>Guest Passes for Friends</td>
+              <td><i class="fa-solid fa-xmark" style="color: var(--color-text-dim);"></i> None</td>
+              <td class="col-featured">1 Pass / Quarter</td>
+              <td><strong>2 Passes / Month</strong></td>
+            </tr>
+            <tr>
+              <td>Post-Workout Fuel Bar Perk</td>
+              <td>10% Discount</td>
+              <td class="col-featured">15% Discount</td>
+              <td><strong>1 Free Daily Shake</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <i class="fa-solid fa-circle-question"></i> Answers & Clarity
+        </div>
+        <h2 class="section-title">FREQUENTLY ASKED <span class="text-orange">QUESTIONS</span></h2>
+        <p class="section-description">
+          Everything you need to know about joining, membership terms, cancellations, and facility amenities.
+        </p>
+      </div>
+
+      <div class="faq-container">
+        <!-- FAQ 1 -->
+        <div class="faq-item active">
+          <button class="faq-question">
+            <span>Can I try out the gym before purchasing a membership?</span>
+            <i class="fa-solid fa-minus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            Absolutely! We offer a complimentary 1-Day Trial Pass and guided facility walk-through for first-time local visitors. You can test the equipment, take a group class, or meet with our coaches before making any financial commitment. Simply click the "Join Now" button and select "1-Day Free Trial Pass".
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Are there any hidden signup or maintenance fees?</span>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            No. At IRONCORE FITNESS, what you see is what you pay. We pride ourselves on complete transparency. There are no surprise administrative charges, locker rental surcharges, or maintenance deductions.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can I pause or freeze my membership if I travel or get injured?</span>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            Yes. Annual and monthly members can freeze their membership for up to 60 cumulative days per year for travel, work, or medical reasons with zero penalty fees. Simply notify our front desk or message us on WhatsApp 48 hours in advance.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What are the gym operating hours?</span>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            Staffed hours are Monday through Saturday from 5:00 AM to 11:00 PM, and Sundays from 6:00 AM to 8:00 PM. Premium and Elite members enjoy 24/7 keycard access, allowing you to train any time day or night.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What should I bring for my first session?</span>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            Please bring clean athletic shoes (no outdoor dirty shoes on the training floor), comfortable gym clothing, and an ID for your initial check-in. We provide chilled filtered water, clean shower facilities, and lockers.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="section section-bg-dark" style="padding: 3rem 0 6rem 0;">
+    <div class="container">
+      <div class="cta-banner">
+        <div class="cta-banner-bg"></div>
+        <div class="cta-banner-content">
+          <h2 class="cta-title">CLAIM YOUR SPOT <br><span class="text-orange">AT IRONCORE TODAY.</span></h2>
+          <p class="cta-subtitle">
+            Sign up now and receive our 14-day progressive strength introductory onboarding program completely free.
+          </p>
+          <div class="cta-buttons">
+            <button class="btn btn-primary btn-lg" data-open-modal="joinModal" data-plan="Premium">
+              <i class="fa-solid fa-bolt"></i> GET STARTED NOW
+            </button>
+            <button class="btn btn-secondary btn-lg whatsapp-trigger">
+              <i class="fa-brands fa-whatsapp"></i> Inquire via WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand">
+            <div class="nav-brand-icon">
+              <i class="fa-solid fa-dumbbell"></i>
+            </div>
+            <span>IRON<span class="brand-accent">CORE</span></span>
+          </a>
+          <p>
+            IRONCORE FITNESS is a premium strength, conditioning, and wellness club built for people who refuse to compromise on their goals.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://instagram.com" target="_blank" class="footer-social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" class="footer-social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://youtube.com" target="_blank" class="footer-social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://twitter.com" target="_blank" class="footer-social-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" class="footer-nav-link">Home</a></li>
+            <li><a href="about.html" class="footer-nav-link">About Us</a></li>
+            <li><a href="programs.html" class="footer-nav-link">Fitness Programs</a></li>
+            <li><a href="trainers.html" class="footer-nav-link">Expert Trainers</a></li>
+            <li><a href="membership.html" class="footer-nav-link">Membership Pricing</a></li>
+            <li><a href="gallery.html" class="footer-nav-link">Gym Photo Gallery</a></li>
+            <li><a href="contact.html" class="footer-nav-link">Contact & Location</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Programs</h4>
+          <ul class="footer-nav-list">
+            <li><a href="programs.html#weight-training" class="footer-nav-link">Weight Training</a></li>
+            <li><a href="programs.html#cardio-training" class="footer-nav-link">Cardio & HIIT</a></li>
+            <li><a href="programs.html#personal-training" class="footer-nav-link">Personal Training</a></li>
+            <li><a href="programs.html#crossfit" class="footer-nav-link">CrossFit WOD</a></li>
+            <li><a href="programs.html#yoga-flexibility" class="footer-nav-link">Yoga & Mobility</a></li>
+            <li><a href="programs.html#strength-training" class="footer-nav-link">Powerlifting & Strength</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contact Info</h4>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>Ironcore Arena, 42 Olympic Boulevard, Metro City, 600001</div>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <div>+91 98765 43210 / +91 98765 43211</div>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>info@ironcorefitness.com</div>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-clock"></i>
+              <div>Mon - Sat: 5:00 AM - 11:00 PM<br>Sun: 6:00 AM - 8:00 PM</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 IRONCORE FITNESS. All Rights Reserved.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#" class="footer-nav-link">Privacy Policy</a>
+          <a href="#" class="footer-nav-link">Terms of Service</a>
+          <a href="#" class="footer-nav-link">Gym Rules</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Join Modal -->
+  <div class="modal-overlay" id="joinModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 style="font-size: 1.5rem; text-transform: uppercase;">
+          SELECT YOUR <span style="color: var(--color-accent);">MEMBERSHIP</span>
+        </h3>
+        <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-top: 4px;">
+          Lock in your membership tier. We'll set up your welcome orientation.
+        </p>
+        <button class="modal-close" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <form id="joinForm">
+          <div class="bmi-form-group">
+            <label class="form-label" for="modalName">Full Name *</label>
+            <input type="text" id="modalName" name="modalName" class="form-control" placeholder="e.g. John Doe" required>
+          </div>
+
+          <div class="bmi-form-row">
+            <div class="bmi-form-group">
+              <label class="form-label" for="modalEmail">Email Address *</label>
+              <input type="email" id="modalEmail" name="modalEmail" class="form-control" placeholder="john@example.com" required>
+            </div>
+            <div class="bmi-form-group">
+              <label class="form-label" for="modalPhone">Phone / WhatsApp *</label>
+              <input type="tel" id="modalPhone" name="modalPhone" class="form-control" placeholder="+91 98765 43210" required>
+            </div>
+          </div>
+
+          <div class="bmi-form-row">
+            <div class="bmi-form-group">
+              <label class="form-label" for="modalPlan">Membership Plan</label>
+              <select id="modalPlan" name="modalPlan" class="form-control">
+                <option value="Premium" selected>Premium Plan (₹1,999/mo) - Recommended</option>
+                <option value="Basic">Basic Plan (₹999/mo)</option>
+                <option value="Elite">Elite Plan (₹3,499/mo)</option>
+                <option value="Trial Pass">1-Day Free Trial Pass</option>
+              </select>
+            </div>
+            <div class="bmi-form-group">
+              <label class="form-label" for="modalProgram">Primary Goal</label>
+              <select id="modalProgram" name="modalProgram" class="form-control">
+                <option value="Weight Training">Muscle Building & Hypertrophy</option>
+                <option value="Cardio Training">Fat Loss & Cardio Fitness</option>
+                <option value="Strength Training">Powerlifting & Strength</option>
+                <option value="CrossFit">Functional CrossFit</option>
+                <option value="Yoga & Flexibility">Flexibility & Posture</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="margin-top: 1.5rem;">
+            <button type="submit" class="btn btn-primary btn-block">
+              <i class="fa-solid fa-check"></i> Complete Registration
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="floating-whatsapp" title="Chat with us on WhatsApp" aria-label="WhatsApp Chat">
+    <i class="fa-brands fa-whatsapp"></i>
+  </div>
+
+  <button class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>

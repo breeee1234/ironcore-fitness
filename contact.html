@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us & Location | IRONCORE FITNESS</title>
+  <meta name="description" content="Get in touch with IRONCORE FITNESS. Visit our Metro City training arena, call our coaching desk, or chat directly via WhatsApp.">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FF5A1F'><path d='M20.57 14.86L22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z'/></svg>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .input-error {
+      border-color: #EF4444 !important;
+      box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.25) !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand">
+        <div class="nav-brand-icon">
+          <i class="fa-solid fa-dumbbell"></i>
+        </div>
+        <span>IRON<span class="brand-accent">CORE</span></span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="programs.html" class="nav-link">Programs</a></li>
+        <li><a href="trainers.html" class="nav-link">Trainers</a></li>
+        <li><a href="membership.html" class="nav-link">Membership</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#joinModal" class="btn btn-primary btn-sm" data-open-modal="joinModal" data-plan="Premium">
+          <i class="fa-solid fa-bolt"></i> Join Now
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-overlay" id="mobileOverlay">
+    <div class="mobile-nav-drawer">
+      <div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+          <div class="nav-brand" style="font-size: 1.4rem;">
+            <div class="nav-brand-icon" style="width: 36px; height: 36px; font-size: 1rem;">
+              <i class="fa-solid fa-dumbbell"></i>
+            </div>
+            <span>IRON<span class="brand-accent">CORE</span></span>
+          </div>
+          <button class="mobile-nav-close" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <div class="mobile-nav-links">
+          <a href="index.html" class="mobile-nav-link">Home</a>
+          <a href="about.html" class="mobile-nav-link">About Us</a>
+          <a href="programs.html" class="mobile-nav-link">Programs</a>
+          <a href="trainers.html" class="mobile-nav-link">Trainers</a>
+          <a href="membership.html" class="mobile-nav-link">Membership</a>
+          <a href="gallery.html" class="mobile-nav-link">Gallery</a>
+          <a href="contact.html" class="mobile-nav-link active">Contact</a>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem;">
+        <button class="btn btn-primary btn-block" data-open-modal="joinModal" data-plan="Premium">
+          <i class="fa-solid fa-bolt"></i> Join IRONCORE
+        </button>
+        <button class="btn btn-secondary btn-block whatsapp-trigger">
+          <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Subpage Hero Header -->
+  <header class="subpage-hero">
+    <div class="subpage-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1920&q=80');"></div>
+    <div class="subpage-hero-overlay"></div>
+    <div class="container">
+      <div class="subpage-hero-content">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-angle-right" style="font-size: 0.75rem;"></i>
+          <span class="current">Contact</span>
+        </div>
+        <h1 style="margin-bottom: 1rem;">GET IN TOUCH WITH <br><span style="color: var(--color-accent);">IRONCORE</span></h1>
+        <p style="font-size: 1.15rem; color: var(--color-text-muted);">
+          Have a question about memberships, personal training, or want to drop by for a tour? We're here to help.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contact Grid: Cards & Interactive Form -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        
+        <!-- Left Column: Contact Cards -->
+        <div class="contact-info-cards">
+          <div>
+            <div class="section-tag">
+              <i class="fa-solid fa-headset"></i> Connect With Us
+            </div>
+            <h2 class="section-title">WE ARE READY TO <span class="text-orange">WELCOME YOU</span></h2>
+            <p style="margin-bottom: 2rem; color: var(--color-text-muted);">
+              Reach out through any of our channels or visit our athletic arena directly. Our front desk concierge is available 7 days a week.
+            </p>
+          </div>
+
+          <!-- Card 1: Location -->
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="contact-card-content">
+              <h4>Arena Location</h4>
+              <p>Ironcore Fitness Arena, 42 Olympic Boulevard, Metro City, 600001</p>
+              <span style="font-size: 0.82rem; color: var(--color-accent); display: block; margin-top: 4px;">
+                <i class="fa-solid fa-square-parking"></i> Free member valet parking available
+              </span>
+            </div>
+          </div>
+
+          <!-- Card 2: Phone -->
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="contact-card-content">
+              <h4>Phone Numbers</h4>
+              <p><a href="tel:+919876543210">+91 98765 43210</a> (Front Desk)</p>
+              <p><a href="tel:+919876543211">+91 98765 43211</a> (Personal Training Desk)</p>
+            </div>
+          </div>
+
+          <!-- Card 3: Email -->
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="contact-card-content">
+              <h4>Email Inquiries</h4>
+              <p><a href="mailto:info@ironcorefitness.com">info@ironcorefitness.com</a></p>
+              <p><a href="mailto:support@ironcorefitness.com">support@ironcorefitness.com</a></p>
+            </div>
+          </div>
+
+          <!-- Card 4: Operating Hours -->
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+            <div class="contact-card-content">
+              <h4>Operating Hours</h4>
+              <p><strong>Mon - Sat:</strong> 5:00 AM – 11:00 PM</p>
+              <p><strong>Sunday:</strong> 6:00 AM – 8:00 PM</p>
+              <span style="font-size: 0.82rem; color: var(--color-accent); display: block; margin-top: 4px;">
+                <i class="fa-solid fa-key"></i> 24/7 Keycard Access for Premium & Elite Members
+              </span>
+            </div>
+          </div>
+
+          <!-- Card 5: WhatsApp Direct Action Card -->
+          <div style="background: linear-gradient(135deg, #10331f 0%, var(--color-surface) 100%); border: 1px solid #25D366; border-radius: var(--radius-lg); padding: 1.8rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap;">
+            <div>
+              <h4 style="color: #25D366; margin-bottom: 0.3rem;"><i class="fa-brands fa-whatsapp"></i> Instant WhatsApp Chat</h4>
+              <p style="font-size: 0.88rem; color: var(--color-text-muted); margin: 0;">Get immediate responses from our head concierge.</p>
+            </div>
+            <button class="btn btn-sm whatsapp-trigger" style="background: #25D366; color: #fff;">
+              Chat Now
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Contact Form -->
+        <div>
+          <div class="contact-form-box">
+            <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;">SEND AN <span class="text-orange">ENQUIRY</span></h3>
+            <p style="font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 2rem;">
+              Fill out your details below and a fitness advisor will contact you within 2 business hours.
+            </p>
+
+            <form id="contactForm">
+              <div class="bmi-form-group">
+                <label class="form-label" for="contactName">Your Name *</label>
+                <input type="text" id="contactName" name="name" class="form-control" placeholder="e.g. John Doe" required>
+              </div>
+
+              <div class="bmi-form-row">
+                <div class="bmi-form-group">
+                  <label class="form-label" for="contactEmail">Email Address *</label>
+                  <input type="email" id="contactEmail" name="email" class="form-control" placeholder="john@example.com" required>
+                </div>
+                <div class="bmi-form-group">
+                  <label class="form-label" for="contactPhone">Phone / WhatsApp *</label>
+                  <input type="tel" id="contactPhone" name="phone" class="form-control" placeholder="+91 98765 43210" required>
+                </div>
+              </div>
+
+              <div class="bmi-form-row">
+                <div class="bmi-form-group">
+                  <label class="form-label" for="contactSubject">Inquiry Topic</label>
+                  <select id="contactSubject" name="subject" class="form-control">
+                    <option value="Membership Plans">Membership Plans & Pricing</option>
+                    <option value="Free Trial Pass">Claim 1-Day Free Trial Pass</option>
+                    <option value="Personal Training">1-on-1 Personal Training</option>
+                    <option value="Facility Tour">Schedule a Guided Gym Tour</option>
+                    <option value="Corporate Wellness">Corporate Membership</option>
+                  </select>
+                </div>
+                <div class="bmi-form-group">
+                  <label class="form-label" for="contactTime">Best Time to Call</label>
+                  <select id="contactTime" name="time" class="form-control">
+                    <option value="Morning (9am - 12pm)">Morning (9:00 AM – 12:00 PM)</option>
+                    <option value="Afternoon (12pm - 4pm)">Afternoon (12:00 PM – 4:00 PM)</option>
+                    <option value="Evening (4pm - 8pm)">Evening (4:00 PM – 8:00 PM)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="bmi-form-group">
+                <label class="form-label" for="contactMessage">Your Message *</label>
+                <textarea id="contactMessage" name="message" class="form-control" rows="5" placeholder="Tell us about your fitness goals or questions..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top: 1rem;">
+                <i class="fa-solid fa-paper-plane"></i> Submit Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Location Map Section -->
+      <div style="margin-top: 5rem;">
+        <div class="section-header" style="margin-bottom: 2rem;">
+          <div class="section-tag">
+            <i class="fa-solid fa-map-location-dot"></i> Find Us
+          </div>
+          <h2 class="section-title">VISIT THE <span class="text-orange">IRONCORE ARENA</span></h2>
+          <p class="section-description">
+            Conveniently situated in Metro City's Olympic Boulevard district with dedicated secure parking.
+          </p>
+        </div>
+
+        <div class="map-card">
+          <iframe 
+            title="Ironcore Fitness Arena Location Map" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.757040713735!2d80.24523171482283!3d13.047807790805988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266459345cbbd%3A0x7d671239c0bc5f6b!2sOlympic%20Boulevard!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <div style="text-align: center; margin-top: 1.5rem;">
+          <a href="https://maps.google.com" target="_blank" class="btn btn-secondary">
+            <i class="fa-solid fa-diamond-turn-right"></i> Open Navigation in Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand">
+            <div class="nav-brand-icon">
+              <i class="fa-solid fa-dumbbell"></i>
+            </div>
+            <span>IRON<span class="brand-accent">CORE</span></span>
+          </a>
+          <p>
+            IRONCORE FITNESS is a premium strength, conditioning, and wellness club built for people who refuse to compromise on their goals.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://instagram.com" target="_blank" class="footer-social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" class="footer-social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://youtube.com" target="_blank" class="footer-social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://twitter.com" target="_blank" class="footer-social-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" class="footer-nav-link">Home</a></li>
+            <li><a href="about.html" class="footer-nav-link">About Us</a></li>
+            <li><a href="programs.html" class="footer-nav-link">Fitness Programs</a></li>
+            <li><a href="trainers.html" class="footer-nav-link">Expert Trainers</a></li>
+            <li><a href="membership.html" class="footer-nav-link">Membership Pricing</a></li>
+            <li><a href="gallery.html" class="footer-nav-link">Gym Photo Gallery</a></li>
+            <li><a href="contact.html" class="footer-nav-link">Contact & Location</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Programs</h4>
+          <ul class="footer-nav-list">
+            <li><a href="programs.html#weight-training" class="footer-nav-link">Weight Training</a></li>
+            <li><a href="programs.html#cardio-training" class="footer-nav-link">Cardio & HIIT</a></li>
+            <li><a href="programs.html#personal-training" class="footer-nav-link">Personal Training</a></li>
+            <li><a href="programs.html#crossfit" class="footer-nav-link">CrossFit WOD</a></li>
+            <li><a href="programs.html#yoga-flexibility" class="footer-nav-link">Yoga & Mobility</a></li>
+            <li><a href="programs.html#strength-training" class="footer-nav-link">Powerlifting & Strength</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contact Info</h4>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>Ironcore Arena, 42 Olympic Boulevard, Metro City, 600001</div>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <div>+91 98765 43210 / +91 98765 43211</div>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>info@ironcorefitness.com</div>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-clock"></i>
+              <div>Mon - Sat: 5:00 AM - 11:00 PM<br>Sun: 6:00 AM - 8:00 PM</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 IRONCORE FITNESS. All Rights Reserved.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#" class="footer-nav-link">Privacy Policy</a>
+          <a href="#" class="footer-nav-link">Terms of Service</a>
+          <a href="#" class="footer-nav-link">Gym Rules</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Join Modal -->
+  <div class="modal-overlay" id="joinModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 style="font-size: 1.5rem; text-transform: uppercase;">
+          JOIN <span style="color: var(--color-accent);">IRONCORE FITNESS</span>
+        </h3>
+        <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-top: 4px;">
+          Send your details to claim a free pass and get scheduled with a coach.
+        </p>
+        <button class="modal-close" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <form id="joinForm">
+          <div class="bmi-form-group">
+            <label class="form-label" for="modalName">Full Name *</label>
+            <input type="text" id="modalName" name="modalName" class="form-control" placeholder="e.g. John Doe" required>
+          </div>
+
+          <div class="bmi-form-row">
+            <div class="bmi-form-group">
+              <label class="form-label" for="modalEmail">Email Address *</label>
+              <input type="email" id="modalEmail" name="modalEmail" class="form-control" placeholder="john@example.com" required>
+            </div>
+            <div class="bmi-form-group">
+              <label class="form-label" for="modalPhone">Phone / WhatsApp *</label>
+              <input type="tel" id="modalPhone" name="modalPhone" class="form-control" placeholder="+91 98765 43210" required>
+            </div>
+          </div>
+
+          <div class="bmi-form-row">
+            <div class="bmi-form-group">
+              <label class="form-label" for="modalPlan">Preferred Membership</label>
+              <select id="modalPlan" name="modalPlan" class="form-control">
+                <option value="Premium" selected>Premium Plan (₹1,999/mo) - Recommended</option>
+                <option value="Basic">Basic Plan (₹999/mo)</option>
+                <option value="Elite">Elite Plan (₹3,499/mo)</option>
+                <option value="Trial Pass">1-Day Free Trial Pass</option>
+              </select>
+            </div>
+            <div class="bmi-form-group">
+              <label class="form-label" for="modalProgram">Focus Area</label>
+              <select id="modalProgram" name="modalProgram" class="form-control">
+                <option value="General Fitness">General Fitness</option>
+                <option value="Weight Training">Weight Training</option>
+                <option value="Personal Training">Personal Training</option>
+                <option value="CrossFit">CrossFit & Conditioning</option>
+                <option value="Yoga & Flexibility">Yoga & Flexibility</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="margin-top: 1.5rem;">
+            <button type="submit" class="btn btn-primary btn-block">
+              <i class="fa-solid fa-check"></i> Submit Membership Enquiry
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="floating-whatsapp" title="Chat with us on WhatsApp" aria-label="WhatsApp Chat">
+    <i class="fa-brands fa-whatsapp"></i>
+  </div>
+
+  <button class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>

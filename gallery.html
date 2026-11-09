@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facility Photo Gallery | IRONCORE FITNESS</title>
+  <meta name="description" content="Explore high-resolution photographs of IRONCORE FITNESS: 15,000 sq ft gym floor, Olympic platforms, cardio suite, recovery sauna, and locker rooms.">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FF5A1F'><path d='M20.57 14.86L22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z'/></svg>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-brand">
+        <div class="nav-brand-icon">
+          <i class="fa-solid fa-dumbbell"></i>
+        </div>
+        <span>IRON<span class="brand-accent">CORE</span></span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="programs.html" class="nav-link">Programs</a></li>
+        <li><a href="trainers.html" class="nav-link">Trainers</a></li>
+        <li><a href="membership.html" class="nav-link">Membership</a></li>
+        <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#joinModal" class="btn btn-primary btn-sm" data-open-modal="joinModal" data-plan="Premium">
+          <i class="fa-solid fa-bolt"></i> Join Now
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-overlay" id="mobileOverlay">
+    <div class="mobile-nav-drawer">
+      <div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+          <div class="nav-brand" style="font-size: 1.4rem;">
+            <div class="nav-brand-icon" style="width: 36px; height: 36px; font-size: 1rem;">
+              <i class="fa-solid fa-dumbbell"></i>
+            </div>
+            <span>IRON<span class="brand-accent">CORE</span></span>
+          </div>
+          <button class="mobile-nav-close" aria-label="Close menu">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <div class="mobile-nav-links">
+          <a href="index.html" class="mobile-nav-link">Home</a>
+          <a href="about.html" class="mobile-nav-link">About Us</a>
+          <a href="programs.html" class="mobile-nav-link">Programs</a>
+          <a href="trainers.html" class="mobile-nav-link">Trainers</a>
+          <a href="membership.html" class="mobile-nav-link">Membership</a>
+          <a href="gallery.html" class="mobile-nav-link active">Gallery</a>
+          <a href="contact.html" class="mobile-nav-link">Contact</a>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem;">
+        <button class="btn btn-primary btn-block" data-open-modal="joinModal" data-plan="Premium">
+          <i class="fa-solid fa-bolt"></i> Join IRONCORE
+        </button>
+        <button class="btn btn-secondary btn-block whatsapp-trigger">
+          <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Subpage Hero Header -->
+  <header class="subpage-hero">
+    <div class="subpage-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=1920&q=80');"></div>
+    <div class="subpage-hero-overlay"></div>
+    <div class="container">
+      <div class="subpage-hero-content">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-angle-right" style="font-size: 0.75rem;"></i>
+          <span class="current">Gallery</span>
+        </div>
+        <h1 style="margin-bottom: 1rem;">OUR FACILITY <br><span style="color: var(--color-accent);">IN ACTION</span></h1>
+        <p style="font-size: 1.15rem; color: var(--color-text-muted);">
+          Take an authentic visual tour through our biomechanically tuned training floor, luxury amenities, and energetic workout zones.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Filter & Masonry Photo Grid -->
+  <section class="section">
+    <div class="container">
+      <!-- Filter Buttons -->
+      <div class="gallery-filter">
+        <button class="filter-btn active" data-filter="all">All Photos</button>
+        <button class="filter-btn" data-filter="floor">Gym Floor & Weights</button>
+        <button class="filter-btn" data-filter="cardio">Cardio & HIIT Zone</button>
+        <button class="filter-btn" data-filter="crossfit">Functional & Rig</button>
+        <button class="filter-btn" data-filter="yoga">Yoga & Mobility</button>
+        <button class="filter-btn" data-filter="recovery">Spa & Recovery</button>
+      </div>
+
+      <!-- 12 High-Res Gallery Cards -->
+      <div class="gallery-grid">
+        <!-- Photo 1 -->
+        <div class="gallery-item" data-category="floor" data-full="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1600&q=85">
+          <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Main Strength Training Floor" class="gallery-img">
+          <div class="gallery-item-overlay">
+            <h4 class="gallery-item-title">Main Strength Training Floor</h4>
+            <span class="gallery-item-category">Gym Floor</span>
+          </div>
+        </div>
+
+        <!-- Photo 2 -->
+        <div class="gallery-item" data-category="floor" data-full="https://images.unsplash.com/photo-1586401100295-7a8096fd231a?auto=format&fit=crop&w=1600&q=85">
+          <img src="https://images.unsplash.com/photo-1586401100295-7a8096fd231a?auto=format&fit=crop&w=800&q=80" alt="Precision Heavy Dumbbell Station" class="gallery-img">
+          <div class="gallery-item-overlay">
+            <h4 class="gallery-item-title">Heavy Dumbbell Station (Up to 60kg)</h4>
+            <span class="gallery-item-category">Free Weights</span>
+          </div>
+        </div>
+
+        <!-- Photo 3 -->
+        <div class="gallery-item" data-category="floor" data-full="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1600&q=85">
+          <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" alt="Olympic Squat & Deadlift Racks" class="gallery-img">
+          <div class="gallery-item-overlay">
+            <h4 class="gallery-item-title">Olympic Squat & Deadlift Racks</h4>
+            <span class="gallery-item-category">Gym Floor</span>
+          </div>
+        </div>
+
+        <!-- Photo 4 -->
+        <div class="gallery-item" data-category="cardio" data-full="https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=1600&q=85">
+          <img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=800&q=80" alt="Woodway Curved Treadmill Suite" class="gallery-img">
+          <div class="gallery-item-overlay">
+            <h4 class="gallery-item-title">Cardio & Slat-Belt Sprinters</h4>
+            <span class="gallery-item-category">Cardio & HIIT Zone</span>
+          </div>
+        </div>
+
+        <!-- Photo 5 -->
+        <div class="gallery-item" data-category="crossfit" data-full="https://images.unsplash.com/photo-1517963879433-6ad2b056d712?auto=format&fit=crop&w=1600&q=85">
+          <img src="https://images.unsplash.com/photo-1517963879433-6ad2b056d712?auto=format&fit=crop&w=800&q=80" alt="Rogue Functional Monster Rig" class="gallery-img">
+          <div class="gallery-item-overlay">
+            <h4 class="gallery-item-title">Rogue Functional Monster Rig</h4>
+            <span class="gallery-item-category">Functional & Rig</span>
+          </div>
+        </div>
+
+        <!-- Photo 6 -->
+        <div class="gallery-item" data-category="yoga" data-full="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=1600&q=85">
+          <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=800&q=80" alt="Acoustic Bamboo Yoga Studio" class="gallery-img">
+          <div class="gallery-item-overlay">
+            <h4 class="gallery-item-title">Acoustic Bamboo Yoga Studio</h4>
+            <span class="gallery-item-category">Yoga & Mobility</span>
+          </div>
+        </div>
+
+        <!-- Photo 7 -->
+        <div class="gallery-item" data-category="crossfit" data-full="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1600&q=85">
+          <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80" alt="Sprint Turf & Prowler Sled Track" class="gallery-img">
+          <div class="gallery-item-overlay">
+            <h4 class="gallery-item-title">30-Meter Sled & Turf Track</h4>
+            <span class="gallery-item-category">Functional & Rig</span>
+          </div>
+        </div>
+
+        <!-- Photo 8 -->
+        <div class="gallery-item" data-category="cardio" data-full="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=1600&q=85">
+          <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=800&q=80" alt="Boxing Ring & Heavy Striking Bags" class="gallery-img">
+          <div class="gallery-item-overlay">
+            <h4 class="gallery-item-title">Boxing Ring & Conditioning Bags</h4>
+            <span class="gallery-item-category">Cardio & HIIT Zone</span>
+          </div>
+        </div>
+
+        <!-- Photo 9 -->
+        <div class="gallery-item" data-category="recovery" data-full="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1600&q=85">
+          <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=800&q=80" alt="Cedarwood Sauna & Eucalyptus Steam" class="gallery-img">
+          <div class="gallery-item-overlay">
+            <h4 class="gallery-item-title">Cedarwood Sauna & Cold Immersion</h4>
+            <span class="gallery-item-category">Spa & Recovery</span>
+          </div>
+        </div>
+
+        <!-- Photo 10 -->
+        <div class="gallery-item" data-category="recovery" data-full="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1600&q=85">
+          <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Luxury Member Locker Suite" class="gallery-img">
+          <div class="gallery-item-overlay">
+            <h4 class="gallery-item-title">Luxury Lockers & Rain Showers</h4>
+            <span class="gallery-item-category">Spa & Recovery</span>
+          </div>
+        </div>
+
+        <!-- Photo 11 -->
+        <div class="gallery-item" data-category="floor" data-full="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?auto=format&fit=crop&w=1600&q=85">
+          <img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?auto=format&fit=crop&w=800&q=80" alt="Calibrated Eleiko Olympic Platforms" class="gallery-img">
+          <div class="gallery-item-overlay">
+            <h4 class="gallery-item-title">Competition Eleiko Platforms</h4>
+            <span class="gallery-item-category">Gym Floor</span>
+          </div>
+        </div>
+
+        <!-- Photo 12 -->
+        <div class="gallery-item" data-category="recovery" data-full="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1600&q=85">
+          <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80" alt="Fuel Bar & Member Community Lounge" class="gallery-img">
+          <div class="gallery-item-overlay">
+            <h4 class="gallery-item-title">Fuel Bar & Athlete Lounge</h4>
+            <span class="gallery-item-category">Spa & Recovery</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <button class="lightbox-close" aria-label="Close lightbox"><i class="fa-solid fa-xmark"></i></button>
+    <button class="lightbox-prev" aria-label="Previous photo"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="lightbox-next" aria-label="Next photo"><i class="fa-solid fa-chevron-right"></i></button>
+    <div class="lightbox-content">
+      <img src="" alt="" class="lightbox-img">
+      <div class="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- CTA Banner -->
+  <section class="section section-bg-dark" style="padding: 3rem 0 6rem 0;">
+    <div class="container">
+      <div class="cta-banner">
+        <div class="cta-banner-bg"></div>
+        <div class="cta-banner-content">
+          <h2 class="cta-title">WANT TO SEE IT <br><span class="text-orange">IN REAL LIFE?</span></h2>
+          <p class="cta-subtitle">
+            Book a private guided tour with our fitness concierge. Walk the floor, test our machines, and enjoy a day workout on us.
+          </p>
+          <div class="cta-buttons">
+            <button class="btn btn-primary btn-lg" data-open-modal="joinModal" data-plan="Trial Pass">
+              <i class="fa-solid fa-ticket"></i> Book Free Facility Tour
+            </button>
+            <button class="btn btn-secondary btn-lg whatsapp-trigger">
+              <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-brand">
+            <div class="nav-brand-icon">
+              <i class="fa-solid fa-dumbbell"></i>
+            </div>
+            <span>IRON<span class="brand-accent">CORE</span></span>
+          </a>
+          <p>
+            IRONCORE FITNESS is a premium strength, conditioning, and wellness club built for people who refuse to compromise on their goals.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://instagram.com" target="_blank" class="footer-social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" class="footer-social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://youtube.com" target="_blank" class="footer-social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://twitter.com" target="_blank" class="footer-social-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" class="footer-nav-link">Home</a></li>
+            <li><a href="about.html" class="footer-nav-link">About Us</a></li>
+            <li><a href="programs.html" class="footer-nav-link">Fitness Programs</a></li>
+            <li><a href="trainers.html" class="footer-nav-link">Expert Trainers</a></li>
+            <li><a href="membership.html" class="footer-nav-link">Membership Pricing</a></li>
+            <li><a href="gallery.html" class="footer-nav-link">Gym Photo Gallery</a></li>
+            <li><a href="contact.html" class="footer-nav-link">Contact & Location</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Programs</h4>
+          <ul class="footer-nav-list">
+            <li><a href="programs.html#weight-training" class="footer-nav-link">Weight Training</a></li>
+            <li><a href="programs.html#cardio-training" class="footer-nav-link">Cardio & HIIT</a></li>
+            <li><a href="programs.html#personal-training" class="footer-nav-link">Personal Training</a></li>
+            <li><a href="programs.html#crossfit" class="footer-nav-link">CrossFit WOD</a></li>
+            <li><a href="programs.html#yoga-flexibility" class="footer-nav-link">Yoga & Mobility</a></li>
+            <li><a href="programs.html#strength-training" class="footer-nav-link">Powerlifting & Strength</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contact Info</h4>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>Ironcore Arena, 42 Olympic Boulevard, Metro City, 600001</div>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <div>+91 98765 43210 / +91 98765 43211</div>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>info@ironcorefitness.com</div>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-clock"></i>
+              <div>Mon - Sat: 5:00 AM - 11:00 PM<br>Sun: 6:00 AM - 8:00 PM</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 IRONCORE FITNESS. All Rights Reserved.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#" class="footer-nav-link">Privacy Policy</a>
+          <a href="#" class="footer-nav-link">Terms of Service</a>
+          <a href="#" class="footer-nav-link">Gym Rules</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Join Modal -->
+  <div class="modal-overlay" id="joinModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 style="font-size: 1.5rem; text-transform: uppercase;">
+          BOOK A <span style="color: var(--color-accent);">VIP GYM TOUR</span>
+        </h3>
+        <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-top: 4px;">
+          Explore our facility in person and test the equipment with a coach.
+        </p>
+        <button class="modal-close" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <form id="joinForm">
+          <div class="bmi-form-group">
+            <label class="form-label" for="modalName">Full Name *</label>
+            <input type="text" id="modalName" name="modalName" class="form-control" placeholder="e.g. John Doe" required>
+          </div>
+
+          <div class="bmi-form-row">
+            <div class="bmi-form-group">
+              <label class="form-label" for="modalEmail">Email Address *</label>
+              <input type="email" id="modalEmail" name="modalEmail" class="form-control" placeholder="john@example.com" required>
+            </div>
+            <div class="bmi-form-group">
+              <label class="form-label" for="modalPhone">Phone / WhatsApp *</label>
+              <input type="tel" id="modalPhone" name="modalPhone" class="form-control" placeholder="+91 98765 43210" required>
+            </div>
+          </div>
+
+          <div class="bmi-form-row">
+            <div class="bmi-form-group">
+              <label class="form-label" for="modalPlan">Preferred Plan</label>
+              <select id="modalPlan" name="modalPlan" class="form-control">
+                <option value="Trial Pass" selected>1-Day Free Trial Pass</option>
+                <option value="Premium">Premium Plan (₹1,999/mo)</option>
+                <option value="Basic">Basic Plan (₹999/mo)</option>
+                <option value="Elite">Elite Plan (₹3,499/mo)</option>
+              </select>
+            </div>
+            <div class="bmi-form-group">
+              <label class="form-label" for="modalProgram">Main Interest</label>
+              <select id="modalProgram" name="modalProgram" class="form-control">
+                <option value="Weight Training">Strength & Free Weights</option>
+                <option value="CrossFit">Functional & CrossFit</option>
+                <option value="Cardio Training">Cardiovascular Suite</option>
+                <option value="Yoga & Flexibility">Yoga & Recovery</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="margin-top: 1.5rem;">
+            <button type="submit" class="btn btn-primary btn-block">
+              <i class="fa-solid fa-check"></i> Schedule Free Facility Walkthrough
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="floating-whatsapp" title="Chat with us on WhatsApp" aria-label="WhatsApp Chat">
+    <i class="fa-brands fa-whatsapp"></i>
+  </div>
+
+  <button class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>
